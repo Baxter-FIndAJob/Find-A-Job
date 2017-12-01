@@ -9,7 +9,11 @@
 
 }
 
-
+.p{
+	font-size: 80px;
+	font-family: "indie flower"; 
+	color: #ffffff;
+}
 .style_example {
 	font-family: 'Roboto';
 	color: yellow;
@@ -17,4 +21,6 @@
 }
 .html {
 	background-color: #171a21;
+	color: red;
+	font-weight: 40px; 
 }
