@@ -26,7 +26,9 @@ html, body {
 	height: 50px;
 	
 }
-
+.icon:hover {
+background: green;
+}
 
 /* STICKY FOOTER */
 .sticky_footer {
@@ -54,6 +56,18 @@ html, body {
 }
 
 .sticky_footer a img{
-	height: 40px;
+	height: 30px;
+	width: 35px;
 	display: block;
-}
+	margin: 100px 3px;
+    padding: 0px 110px;
+    align-self: center;
+  }
+ 
+
+  .home{
+  	color: white;
+    position: absolute;
+    top: 0px;
+    left: 120px;
+  }
