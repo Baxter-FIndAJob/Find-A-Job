@@ -30,27 +30,38 @@ html, body{
 */
 
 .form_holder{
-	width: 50%;
+	width: 700px;
     height: 500px;
     background: white;
-    margin: auto;
+    margin: 15px auto;
     box-shadow: 0px 0px 5px rgba(123, 123, 123, 0.49);
+    text-align: center;
 }
 
+.form_options {
+}
+
+
 .form_options h4{
-	float: left;
     padding: 6px 15px;
-    margin: 2px 2px;
+    margin: 20px 2px;
     font-family: 'Roboto';
     border-radius: 5px;
     border: 1px solid #d2d2d2;
     box-shadow: 0px 0px 2px rgba(123, 123, 123, 0.49);
+    display: inline-block;
+}
+
+.form_options h4.active_selection {
+    background: #4267b2;
+    color: white;
 }
 
 .login_holder div input{
 	padding: 0px 15px;
     margin: 0;
     width: 300px;
+    max-width: 80%;
     height: 30px;
     border-radius: 10px;
     border: 1px solid #dcdcdc;
@@ -60,43 +71,37 @@ html, body{
 }
 
 .footer_menu{
+	width: 700px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.footer_menu div.footer_column{
+    text-align: center;
+    float: left;
+    width: 33%;
+}
+
+
+.footer_menu div.footer_column .selection_name{
 	width: 100%;
-    height: 120px;
-    background: #eaeaea;
-    position: absolute;
-    bottom: 0px;
-    box-shadow: 0px 0px 100px #ffffff;
 }
 
-.footer_menu div[class="footer_column"]{
-text-align: center;
-}
-
-.footer_menu div[class="footer_column"] div[class~="selection_name"]{
-	width: 100%;
-	height: 20px;
-}
-
-.footer_menu div[class="footer_column"] div h4{
+.footer_menu div.footer_column div h4{
 	text-decoration: none;
 	color: #929292;
-	display: block;
-	float: left;
 	font-family: Roboto;
 	font-size: 14px;
 	font-weight: 500;
 	padding: 0;
-	margin: 0;
-	width: 100%;
-}
-
-.footer_menu div[class="footer_column"]{
-	width: 14%;
-	float: left;
+	margin: 0 0 8px;
 }
 
 
-.footer_menu div[class="footer_column"]  div a{
+
+
+.footer_menu div.footer_column  div a{
     text-decoration: none;
     font-family: "Roboto";
     font-size: 12px;
@@ -106,8 +111,35 @@ text-align: center;
     color: #989898;
 }
 
-.footer_menu div[class="footer_column"] img[class="language_globe"]{
+.footer_menu div.footer_column img.language_globe{
     width: 30px;
-    position: relative;
-    top: 40px;
 }
+
+
+@media only screen and (max-width: 700px) {
+    .form_holder, .footer_menu{
+        width: 500px;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .form_holder, .footer_menu{
+        width: 400px;
+    }
+
+
+    .footer_menu div.footer_column {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .form_holder, .footer_menu{
+        width: 300px;
+    }
+}
+
+
+
