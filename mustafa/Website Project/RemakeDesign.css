@@ -1,0 +1,144 @@
+html, body{
+	margin: 0;
+	padding: 0;
+	background: #dedede;
+	min-height: 100%;
+}
+
+.header{
+	width: 100%;
+	height: 50px;
+    background: #f7f7f7;
+    box-shadow: 0px 0px 5px #b5b5b5;
+}
+
+.form_holder{
+    width: 700px;
+    height: 500px;
+    border: 1px solid #b1b1b1;
+    box-shadow: 0px 0px 3px #b5b5b5;
+    background: #f8f7f7;
+    margin: 35px auto;
+    text-align: center;
+}
+
+.form_options h4{
+    padding: 6px 15px;
+    margin: 20px 2px;
+    font-family: 'Roboto';
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    box-shadow: 0px 0px 2px rgba(123, 123, 123, 0.49);
+    display: inline-block;
+    color: #2f2a2a;
+}
+
+.form_options h4.active_selection {
+    background: #2e2a2a;
+    color: white;
+}
+
+.signup_holder div input{
+	padding: 0px 45px;
+    margin: 3px 0px;
+    width: 400px;
+    max-width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #cecece;
+    color: #2f2a2a;
+    outline: none;
+    background: transparent;
+    font-family: 'Roboto';
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.login_holder div input{
+	padding: 0px 45px;
+    margin: 3px 0px;
+    width: 400px;
+    max-width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #cecece;
+    color: #2f2a2a;
+    outline: none;
+    background: transparent;
+    font-family: 'Roboto';
+    font-size: 13px;
+    font-weight: 500;
+}
+
+html, body{
+	margin: 0;
+	padding: 0;
+	background: #dedede;
+	min-height: 100%;
+}
+
+.header{
+	width: 100%;
+	height: 50px;
+    background: #f7f7f7;
+    box-shadow: 0px 0px 5px #b5b5b5;
+}
+
+.form_holder{
+    width: 700px;
+    height: 500px;
+    border: 1px solid #b1b1b1;
+    box-shadow: 0px 0px 3px #b5b5b5;
+    background: #f8f7f7;
+    margin: 35px auto;
+    text-align: center;
+}
+
+.form_options h4{
+    padding: 6px 15px;
+    margin: 20px 2px;
+    font-family: 'Roboto';
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    box-shadow: 0px 0px 2px rgba(123, 123, 123, 0.49);
+    display: inline-block;
+    color: #2f2a2a;
+}
+
+.form_options h4.active_selection {
+    background: #2e2a2a;
+    color: white;
+}
+
+.signup_holder div input{
+	padding: 0px 45px;
+    margin: 3px 0px;
+    width: 400px;
+    max-width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #cecece;
+    color: #2f2a2a;
+    outline: none;
+    background: transparent;
+    font-family: 'Roboto';
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.login_holder div input{
+	padding: 0px 45px;
+    margin: 3px 0px;
+    width: 400px;
+    max-width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #cecece;
+    color: #2f2a2a;
+    outline: none;
+    background: transparent;
+    font-family: 'Roboto';
+    font-size: 13px;
+    font-weight: 500;
+}
+
