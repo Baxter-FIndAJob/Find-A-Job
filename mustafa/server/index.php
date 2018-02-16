@@ -3,7 +3,6 @@
 
 	// load our library of functions
 	require('db_simple.php');
-	
 
 
 	
@@ -30,6 +29,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Document</title>
+		<link href="websitedesign.css" type="text/css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,100" rel="stylesheet">
 	</head>
 	<body>
 
@@ -37,15 +38,12 @@
 
 		<?php
 			foreach($jobs as $j){
-				echo '	<a href="?e=' . $j -> employerId . '">' . $j -> employerName . '</a><br />
-
+				echo 
+					'	<div>
+						<a href="?e=' . $j -> employerId . '">' . $j -> employerName . '</a><br />
 						<a href="?j=' . $j -> jobId . '" style="font-style: italic">' . $j -> jobTitle . '</a><br />
-				
-						<div style="font-weight: bold">' . $j -> jobDescription . '</div>
-
-						<br /><br /><br />';
-
-
+						<div style="font-weight: bold">' . $j -> jobDescription . '</div></div>
+						<br />';
 			}
 		?>
 	</body>

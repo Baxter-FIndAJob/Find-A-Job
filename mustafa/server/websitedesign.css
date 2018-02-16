@@ -1,0 +1,13 @@
+html, body{
+	margin: 0;
+	padding: 0;
+	background: #dedede;
+	min-height: 100%;
+}
+
+body a{
+	font-family: 'Roboto';
+    font-weight: 540;
+    text-decoration: none;
+    color: black;
+}
