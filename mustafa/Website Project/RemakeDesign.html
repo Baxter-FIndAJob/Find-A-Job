@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device-width">
 	<link href="RemakeDesign.css" type="text/css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,100" rel="stylesheet">
+	<link rel="stylesheet" href="fontawesome.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 <body>
 	<div class="page_holder">
@@ -13,31 +15,44 @@
 		</div>
 		<div class="form_holder">
 			<div class="form_options">
-					<h4 class="active_selection">Login</h4>
-					<h4 class="inactive_selection">Sign Up</h4>
+					<h4 class="active_selection">Sign Up</h4>
+					<h4 class="inactive_selection">Login</h4>
 			</div>
-				<div class="login_holder" class-type="active_selection">
+				<div class="login_holder" class-type="active_selection" hidden="true">
 					<div class="inputwithText" class-type="Email">
 						<input class="Input" maxlength="255" type="Email" placeholder="Email">
+						 <i class="fas fa-envelope"></i>
 					</div>
 					<div class="inputwithText" class-type="Password">
-						<input class="Input" maxlength="25" type="Password" placeholder="Password">
+						<input class="Input" maxlength="255" type="Password" placeholder="Password">
+						<i class="fas fa-key"></i>
 					</div>
+					<button class="submit">Login</button>
+					<h3>OR</h3>
+					<h4>Forgot your password?</h4>
 				</div>
-				<div class="signup_holder" class-type="active_selection" hidden="true">
+				<div class="signup_holder" class-type="active_selection">
 					<div class="inputwithText" class-type="firstName">
 						<input class="Input" maxlength="255" placeholder="First Name">
-						<img src="profile.png">
+						<i class="fas fa-user"></i>	
+					</div>
+					<div class="inputwithText" class-type="lastName">
+						<input class="Input" maxlength="255" placeholder="Last/Middle Name">
+						<i class="fas fa-id-card"></i>	
 					</div>
 					<div class="inputwithText" class-type="Email">
 						<input class="Input" maxlength="255" type="Email" placeholder="Email">
+						<i class="fas fa-envelope"></i>
 					</div>
 					<div class="inputwithText" class-type="Password">
-						<input class="Input" maxlength="25" type="Password" placeholder="Password">
+						<input class="Input" maxlength="255" type="Password" placeholder="Password">
+						<i class="fas fa-key"></i>
 					</div>
 					<div class="inputwithText" class-type="Retype_Password">
-						<input class="Inout" maxlength="25" type="Password" placeholder="Retype Password">
+						<input class="Inout" maxlength="255" type="Password" placeholder="Retype Password">
+						<i class="fas fa-lock"></i>
 					</div>
+					<button class="submit">Sign up!</button>
 				</div>
 			</div>
 			<div class="footer_menu">

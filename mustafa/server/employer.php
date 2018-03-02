@@ -24,8 +24,6 @@
 	$sql = 'SELECT * FROM jobs  WHERE employerId = ' . $employerId;
 	$jobs = get_list($sql);
 
-	print_r($jobs);
-
 	
 ?>
 
@@ -40,14 +38,13 @@
 	<body>
 
 
-
 		<?php
 			foreach($jobs as $j){
 				echo 
 					'	<div>
-						<a href="?e=' . $j -> employerId . '">' . $j -> employerName . '</a><br />
-						<a href="?j=' . $j -> jobId . '" style="font-style: italic">' . $j -> jobTitle . '</a><br />
-						<div style="font-weight: bold">' . $j -> jobDescription . '</div></div>
+						<a class="employer_name"href="?e=' . $j -> employerId . '">' . $j -> employerName . '</a><br />
+						<a class="job_title" href="?j=' . $j -> jobId . '" style="font-style: italic">' . $j -> jobTitle . '</a><br />
+						<div class="job_description" style="font-weight: bold">' . $j -> jobDescription . '</div></div>
 						<br />';
 			}
 		?>

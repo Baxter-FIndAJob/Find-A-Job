@@ -39,7 +39,7 @@ html, body{
 }
 
 .signup_holder div input{
-	padding: 0px 45px;
+	padding: 0px 35px;
     margin: 3px 0px;
     width: 400px;
     max-width: 80%;
@@ -54,8 +54,51 @@ html, body{
     font-weight: 500;
 }
 
+.signup_holder div.inputwithText{
+    height: 37px;
+}
+
+.signup_holder div svg{
+    font-size: 20px;
+    color: #2f2a2a;
+    display: block;
+    position: relative;
+    bottom: 29px;
+    left: 120px;
+}
+
+.signup_holder button{
+    padding: 5px 30px;
+    border: 0px;
+    border-radius: 5px;
+    background: #2f2a2a;
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 450;
+    font-size: 14px;
+    margin: 5px 0px;
+    outline: none;
+}
+
+.signup_holder h3{
+    font-family: 'Roboto';
+    font-weight: 610;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+
+}
+
+.signup_holder h4{
+    font-family: 'Roboto';
+    font-weight: 510;
+    font-size: 12px;
+    padding: 0;
+    margin: 5px 0px;
+}
+
 .login_holder div input{
-	padding: 0px 45px;
+    padding: 0px 35px;
     margin: 3px 0px;
     width: 400px;
     max-width: 80%;
@@ -68,6 +111,49 @@ html, body{
     font-family: 'Roboto';
     font-size: 13px;
     font-weight: 500;
+}
+
+.login_holder div.inputwithText{
+    height: 37px;
+}
+
+.login_holder div svg{
+    font-size: 2px;
+    color: #2f2a2a;
+    display: block;
+    position: relative;
+    bottom: 29px;
+    left: 120px;
+}
+
+.login_holder button{
+    padding: 5px 30px;
+    border: 0px;
+    border-radius: 5px;
+    background: #2f2a2a;
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 450;
+    font-size: 14px;
+    margin: 5px 0px;
+    outline: none;
+}
+
+.login_holder h3{
+    font-family: 'Roboto';
+    font-weight: 610;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+
+}
+
+.login_holder h4{
+    font-family: 'Roboto';
+    font-weight: 510;
+    font-size: 12px;
+    padding: 0;
+    margin: 5px 0px;
 }
 
 html, body{
@@ -110,37 +196,6 @@ html, body{
     color: white;
 }
 
-.signup_holder div input{
-	padding: 0px 45px;
-    margin: 3px 0px;
-    width: 400px;
-    max-width: 80%;
-    height: 30px;
-    border-radius: 5px;
-    border: 1px solid #cecece;
-    color: #2f2a2a;
-    outline: none;
-    background: transparent;
-    font-family: 'Roboto';
-    font-size: 13px;
-    font-weight: 500;
-}
-
-.login_holder div input{
-	padding: 0px 45px;
-    margin: 3px 0px;
-    width: 400px;
-    max-width: 80%;
-    height: 30px;
-    border-radius: 5px;
-    border: 1px solid #cecece;
-    color: #2f2a2a;
-    outline: none;
-    background: transparent;
-    font-family: 'Roboto';
-    font-size: 13px;
-    font-weight: 500;
-}
 
 .footer_menu{
     width: 700px;
