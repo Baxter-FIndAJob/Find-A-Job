@@ -19,3 +19,22 @@ body a{
     text-decoration: none;
     color: black;
 }
+
+.job_holder div{
+	float: left;
+	width: 25%;
+	height: 150px;
+	background: white;
+	margin: 15px 0px;
+}
+
+.job_holder div img{
+	height: 30px;
+	border-radius: 15px;
+	position: relative;
+	top: 105px;
+}
+
+.job_holder div a b{
+	width: 100%;
+}

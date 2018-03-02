@@ -25,18 +25,18 @@
 		<div class="header">
 
 		</div>
+		<div class="job_holder">
 		<?php
-
 			foreach($employers as $e){
 
-				echo '<img src="images/employers/' . $e -> employerId . '.png" />';
-				echo '<a href="employer.php?e=' . $e-> employerId . '"><b>' . $e -> employerName . '</b></a>
-
-				<br /><br />';
+				echo '	<div class="employer employer_' . $e -> employerId . '">
+							<img src="images/employers/' . $e -> employerId . '.png" />
+							<a href="employer.php?e=' . $e-> employerId . '"><b>' . $e -> employerName . '</b></a>
+						</div>
+						';
 			}
 
 		?>
-
-		
+		</div>
 	</body>
 </html>

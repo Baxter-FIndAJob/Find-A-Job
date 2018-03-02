@@ -36,8 +36,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,100" rel="stylesheet">
 	</head>
 	<body>
-
-
+		<div class="job_holder">
 		<?php
 			foreach($jobs as $j){
 				echo 
@@ -48,5 +47,6 @@
 						<br />';
 			}
 		?>
+		</div>
 	</body>
 </html>
