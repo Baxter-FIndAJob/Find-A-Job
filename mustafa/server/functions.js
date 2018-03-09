@@ -1,3 +1,5 @@
+
+
 var recentSearchHolder = document.getElementById("recent-search-holder");
 var filterHolder = document.getElementById("filter-holder")
 var searchLocationHolder = document.getElementById("search-location-holder")
@@ -12,17 +14,14 @@ function toggleLevel(el){
 	var lvl4 = document.getElementById("lvl4");
 	var lvl5 = document.getElementById("lvl5");
 				
-		lvl1.classList.remove("active");
-		lvl2.classList.remove("active");
-		lvl3.classList.remove("active");
-		lvl4.classList.remove("active");
-		lvl5.classList.remove("active");
-			if(el.className == "active"){
-				return
-			}else{
-			if(el.className >= "active");
-				el.classList.add("active");	
-		};				
+	lvl1.classList.remove("active");
+	lvl2.classList.remove("active");
+	lvl3.classList.remove("active");
+	lvl4.classList.remove("active");
+	lvl5.classList.remove("active");
+
+	el.classList.add("active");	
+
 };
 
 function createTag(dom, string, parent, type){
