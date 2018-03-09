@@ -1,40 +1,241 @@
 html, body{
 	margin: 0;
 	padding: 0;
-	background: #f8f7f7;
-	background: #dedede;
+	background: #fbfbfb;
 	min-height: 100%;
-}
-
-.header{
-	width: 100%;
-	height: 50px;
-    background: #f7f7f7;
-    box-shadow: 0px 0px 5px #b5b5b5;
 }
 
 body a{
 	font-family: 'Roboto';
     font-weight: 540;
     text-decoration: none;
-    color: black;
+    color: #000000;
 }
 
-.job_holder div{
-	float: left;
-	width: 25%;
-	height: 150px;
-	background: white;
-	margin: 15px 0px;
-}
-
-.job_holder div img{
-	height: 30px;
-	border-radius: 15px;
-	position: relative;
-	top: 105px;
-}
-
-.job_holder div a b{
+.header{
 	width: 100%;
+	height: 50px;
+    background: #ffffff;
+    box-shadow: 0px 0px 5px #dcdcdc;
 }
+
+.page_holder{
+	position: relative;
+	top: 15px;
+}
+
+.filter_holder{
+    width: 230px;
+    position: relative;
+    left: 130px;
+    background: #ffffff;
+    box-shadow: 0px 0px 5px #b5b5b5;
+    border-radius: 5px;
+    padding: 6px 10px;
+}
+
+.filter_holder div b.title{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 14px;
+    color: #5a5a5a;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+.filter_holder .recent_searches ul{
+	margin: 0px;
+	padding: 0px;
+}
+
+.filter_holder .recent_searches ul a{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 12px;
+    background: #2f2a2a;
+    margin: 3px 2px;
+    padding: 4px 6px;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;
+}
+
+.filter_holder div.filters div{
+	display: inline-block;
+}
+
+.filter_holder div.filters div a{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 12px;
+    margin: 3px 0px;
+    padding: 4px 6px;
+    color: #302a2a;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;	
+}
+
+
+
+.filter_search div b.smaller_title{
+	font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 12px;
+    color: #5a5a5a;
+    user-select: none;
+}
+
+.filter_search div b.v2smaller_title{
+	font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 11px;
+    color: #5a5a5a;
+    user-select: none;
+}
+
+.filter_search div b.center{
+	display: block;
+	text-align: center;
+}
+
+
+.filter_search div div.distance_slider{
+    width: 100%;
+    height: 1px;
+    background: #969998;
+    margin: 10px 0px;
+}
+
+.filter_search div div.distance_slider div.circle{
+    width: 10px;
+    height: 10px;
+    background: #312a2a;
+    border-radius: 50px;
+    position: relative;
+    bottom: 6px;
+    border: 1px solid #ffffff;
+    box-shadow: 0px 0px 8px #000000;
+    cursor: pointer;
+}
+
+.filter_search div.experience a{
+    padding: 1px 3px;
+    background: #969998;
+    color: #ffffff;
+    font-size: 13px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    border-radius: 3px;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.filter_search div.experience a.active{
+    background: #302a2a;
+    cursor: default;
+}
+
+.filter_search div div.toggle_button{
+	width: 32px;
+    height: 10px;
+    background: #959998;
+    border-radius: 15px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.filter_search div div.toggle_button .inner_circle{
+	width: 12px;
+    height: 11px;
+    background: #ffffff;
+    border-radius: 50px;
+    margin: 0px;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+}
+
+.filter_search div svg{
+	margin: 0px 5px;
+    font-size: 12px;
+    color: #302a2a;
+}
+
+.filter_search div div.toggle_button.active{
+    background: #302a2a;
+}
+
+.filter_search div div.toggle_button.active .inner_circle{
+	margin-left: 20px;
+}
+
+.job_holder{
+    position: relative;
+    left: 400px;
+    bottom: 550px;
+    height: 600px;
+    background: #ffffff;
+    width: 1000px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px #b5b5b5;
+    border-radius: 5px;
+}
+
+/** Footer **/
+.footer_menu{
+    width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer_menu .company_logo{
+	height: 60px;
+	user-select: none;
+}
+
+.footer_menu div.footer_column{
+    text-align: center;
+    float: left;
+    width: 33%;
+}
+
+
+.footer_menu div.footer_column .selection_name{
+    width: 100%;
+}
+
+.footer_menu div.footer_column div h4{
+    text-decoration: none;
+    color: #929292;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    margin: 0 0 8px;
+}
+
+
+
+
+.footer_menu div.footer_column  div a{
+    text-decoration: none;
+    font-family: "Roboto";
+    font-size: 12px;
+    font-weight: 480;
+    margin: 0;
+    padding: 0;
+    color: #989898;
+}
+
+.footer_menu div.footer_column img.language_globe{
+    width: 30px;
+}
+
