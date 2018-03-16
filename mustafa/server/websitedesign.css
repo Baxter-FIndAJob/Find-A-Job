@@ -1,28 +1,102 @@
 html, body{
-	margin: 0;
-	padding: 0;
-	background: #fbfbfb;
-	min-height: 100%;
-}
-
-body a{
-	font-family: 'Roboto';
-    font-weight: 540;
-    text-decoration: none;
-    color: #000000;
+    margin: 0;
+    padding: 0;
+    background: #fbfbfb;
+    min-height: 100%;
 }
 
 .header{
-	width: 100%;
-	height: 50px;
+    width: 100%;
+    display: inline-block;
     background: #ffffff;
+    border-bottom: 1px solid #ded9d9;
     box-shadow: 0px 0px 5px #dcdcdc;
 }
 
-.page_holder{
-	position: relative;
-	top: 15px;
+.header .search{
+   display: inline-block;
+   width: 100%;
+   height: 50px;
+   border-bottom: 1px solid #ded9d9;
 }
+
+.header .text .left{
+    display: inline-block;
+    float: left;
+    margin: 0px 10px;
+}
+
+.header .text .left a.textContent{
+    padding: 5px 10px;
+    margin: 5px;
+    font-family: 'Roboto';
+    color: #312a2a;
+    font-weight: 401;
+    font-size: 14px;
+    display: block;
+    float: left;
+    border: 2px solid #fff;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all .25s;
+    outline: none;
+} 
+
+.header .text .left a.sponsorship{
+    color: #0071BC;
+}
+
+.header .text .right{
+    display: inline-block;
+    float: right;
+    margin: 0px 10px;
+}
+
+.header .text .right a.textContent{
+    padding: 5px 10px;
+    margin: 5px;
+    font-family: 'Roboto';
+    font-weight: 401;
+    font-size: 14px;
+    display: block;
+    float: left;
+    border: 2px solid #fff;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all .25s;
+} 
+
+.header .text .right a.blog{
+    color: #0071BC;
+}
+
+.header .text .right a.login{
+    background: none;
+    border: 2px solid #0071BC;
+    color: #0071BC;
+    border-radius: 15px;
+}
+
+.header .text .right a.signup{
+    background: #ff6d3f;
+    border: 2px solid #0071BC;
+    color: #ffffff;
+    border-radius: 15px;
+    background: -webkit-linear-gradient(600deg, #2196F3, #0071BC);
+    background: -moz-linear-gradient(600deg, #2196F3, #0071BC);
+    background: -ms-linear-gradient(600deg, #2196F3, #0071BC);
+    background: -o-linear-gradient(600deg, #2196F3, #0071BC);
+}
+
+.header .text .right a.signup:hover{
+    color: #ffffff;
+}
+
+.page_holder{
+    position: relative;
+    top: 15px;
+}
+
 
 .filter_holder{
     width: 230px;
@@ -48,8 +122,8 @@ body a{
 }
 
 .filter_holder .recent_searches ul{
-	margin: 0px;
-	padding: 0px;
+    margin: 0px;
+    padding: 0px;
 }
 
 .filter_holder .recent_searches ul a{
@@ -67,7 +141,7 @@ body a{
 }
 
 .filter_holder div.filters div{
-	display: inline-block;
+    display: inline-block;
 }
 
 .filter_holder div.filters div a{
@@ -76,17 +150,18 @@ body a{
     font-size: 12px;
     margin: 3px 0px;
     padding: 4px 6px;
-    color: #302a2a;
+    color: #ffffff;
+    background: #312a2a;
     border-radius: 5px;
     cursor: pointer;
     display: inline-block;
-    user-select: none;	
+    user-select: none;  
 }
 
 
 
 .filter_search div b.smaller_title{
-	font-family: 'Roboto';
+    font-family: 'Roboto';
     font-weight: 500;
     font-size: 12px;
     color: #5a5a5a;
@@ -94,7 +169,7 @@ body a{
 }
 
 .filter_search div b.v2smaller_title{
-	font-family: 'Roboto';
+    font-family: 'Roboto';
     font-weight: 500;
     font-size: 11px;
     color: #5a5a5a;
@@ -102,8 +177,8 @@ body a{
 }
 
 .filter_search div b.center{
-	display: block;
-	text-align: center;
+    display: block;
+    text-align: center;
 }
 
 
@@ -114,6 +189,25 @@ body a{
     margin: 10px 0px;
 }
 
+.filter_search div input.company_filter_search{
+    width: 70%;
+    transition: all .25s;
+    color: #312a2a;
+    padding: 5px 10px;
+    margin: 5px 0px;
+    font-family: 'Roboto';
+    font-weight: 450;
+    outline: none;
+    border: 1px solid #cccacb;
+    background: #f3f3f3;
+    border-radius: 5px;
+}
+
+.filter_search div input.company_filter_search:focus{
+    width: 90%;
+}
+
+
 .filter_search div div.distance_slider div.circle{
     width: 10px;
     height: 10px;
@@ -122,7 +216,7 @@ body a{
     position: relative;
     bottom: 6px;
     border: 1px solid #ffffff;
-    box-shadow: 0px 0px 8px #000000;
+    box-shadow: 0px 0px 8px #312a2a;
     cursor: pointer;
 }
 
@@ -140,12 +234,12 @@ body a{
 
 
 .filter_search div.experience a.active{
-    background: #302a2a;
+    background: #312a2a;
     cursor: default;
 }
 
 .filter_search div div.toggle_button{
-	width: 32px;
+    width: 32px;
     height: 10px;
     background: #959998;
     border-radius: 15px;
@@ -154,7 +248,7 @@ body a{
 }
 
 .filter_search div div.toggle_button .inner_circle{
-	width: 12px;
+    width: 12px;
     height: 11px;
     background: #ffffff;
     border-radius: 50px;
@@ -164,29 +258,17 @@ body a{
 }
 
 .filter_search div svg{
-	margin: 0px 5px;
+    margin: 0px 5px;
     font-size: 12px;
     color: #302a2a;
 }
 
 .filter_search div div.toggle_button.active{
-    background: #302a2a;
+    background: #312a2a;
 }
 
 .filter_search div div.toggle_button.active .inner_circle{
-	margin-left: 20px;
-}
-
-.job_holder{
-    position: relative;
-    left: 400px;
-    bottom: 550px;
-    height: 600px;
-    background: #ffffff;
-    width: 1000px;
-    padding: 10px;
-    box-shadow: 0px 0px 5px #b5b5b5;
-    border-radius: 5px;
+    margin-left: 20px;
 }
 
 /** Footer **/
@@ -197,8 +279,8 @@ body a{
 }
 
 .footer_menu .company_logo{
-	height: 60px;
-	user-select: none;
+    height: 60px;
+    user-select: none;
 }
 
 .footer_menu div.footer_column{

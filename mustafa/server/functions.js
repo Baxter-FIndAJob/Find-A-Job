@@ -1,9 +1,11 @@
+
+
 var recentSearchHolder = document.getElementById("recent-search-holder");
 var filterHolder = document.getElementById("filter-holder")
 var searchLocationHolder = document.getElementById("search-location-holder")
 var searchJobHolder = document.getElementById("search-job-holder")
-var latestLocation = [];
-var latestJob = [];
+var latestLocation;
+var latestJob;
 
 function toggleLevel(el){
 	var lvl1 = document.getElementById("lvl1");
@@ -17,12 +19,8 @@ function toggleLevel(el){
 		lvl3.classList.remove("active");
 		lvl4.classList.remove("active");
 		lvl5.classList.remove("active");
-			if(el.className == "active"){
-				return
-			}else{
-			if(el.className >= "active");
-				el.classList.add("active");	
-		};				
+		
+		el.classList.add("active");	
 };
 
 function createTag(dom, string, parent, type){
@@ -34,7 +32,6 @@ function createTag(dom, string, parent, type){
 	var newElement = document.createElement(dom);
 		newElement.className = type + " " + string;
 		newElement.textContent = string;
-		console.log(tagParent)
 
 	if(tagParent == recentSearchHolder){
 		recentSearchHolder.insertBefore(newElement,recentSearchHolder.firstChild);
@@ -42,10 +39,12 @@ function createTag(dom, string, parent, type){
 	if(tagParent == searchLocationHolder){
 		newElement.setAttribute("onclick","removeTag(this," + '"' + type + '"'+")");
 		searchLocationHolder.appendChild(newElement);
+		latestLocation = string;
 	}else{
 	if(tagParent == searchJobHolder){
 		newElement.setAttribute("onclick","removeTag(this," + '"' + type + '"'+")");
 		searchJobHolder.appendChild(newElement);
+		latestJob = string;
 	}
 	}
 	}	
@@ -88,7 +87,7 @@ createTag("a","Portland, ME", searchLocationHolder, "location" )
 createTag("a","Sandwich Artist", searchJobHolder, "job" )
 
 
-// createTag("a",latestLocation, recentSearchHolder, "search" )
-// createTag("a",latestJob, recentSearchHolder, "search" )
+createTag("a",latestLocation, recentSearchHolder, "search" )
+createTag("a",latestJob, recentSearchHolder, "search" )
 
 

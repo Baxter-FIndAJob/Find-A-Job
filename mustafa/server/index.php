@@ -1,18 +1,12 @@
 <?php 
-
-	// HOME PAGE - LIST EMPLOYERS
-
-
 	// load our library of functions
 	require('db_simple.php');
 
-
 	// fetch jobs
 	$sqle = 'SELECT * FROM employers';
-	$sqlj = 'SELECT * FROM jobs';
+	$sqlj = 'SELECT * FROM jobs ';
 	$employers = get_list($sqle);
 	$jobs = get_list($sqlj);
-
 	
 ?>
 
@@ -28,7 +22,22 @@
 	</head>
 	<body>
 		<div id="header" class="header">
-			<div class="container">
+			<div class="search container">
+				
+			</div>
+			<div class="text container">
+				<div class="left">
+					<a class="textContent view_jobs">View Jobs</a>
+					<a class="textContent view_jobs">View Companies</a>
+					<a class="textContent sponsorship">Become a Sponsor</a>
+				</div>
+				<div class="right">
+					<a class="textContent blog">Blog</a>
+					<a class="textContent about">About</a>
+					<a class="textContent faq">FAQ</a>
+					<a class="textContent login">Login</a>
+					<a class="textContent signup" href="login.php">Become a Member</a>
+				</div>
 			</div>
 		</div>
 		<div class="page_holder">
@@ -46,6 +55,11 @@
 							<i class="fas fa-briefcase" classtype="icon"></i><br>
 							<div id="search-job-holder">
 							</div>
+					</div>
+				<br>
+					<div class="company">
+						<b class="smaller_title">COMPANY</b><br>
+						<input class="company_filter_search" placeholder="Search by Company" />
 					</div>
 				<br>
 					<div class="distane">
@@ -92,15 +106,25 @@
 									<div class="inner_circle"></div>
 								</div>
 					</div>
+				<br>
 					<div class="recent_searches">
-					<b class="title" onclick="">RECENT SEARCHES</b>
+						<b class="title" onclick="">RECENT SEARCHES</b>
 						<ul id="recent-search-holder">
 						</ul>
-				</div>
+					</div>
 			</div>
 		</div>
 		<div class="job_holder">
 			<!--
+			foreach($jobs as $j){
+				echo 
+					'	<div>
+						<a class="employer_name"href="?e=' . $j -> employerId . '">' . $j -> employerName . '</a><br />
+						<a class="job_title" href="?j=' . $j -> jobId . '" style="font-style: italic">' . $j -> jobTitle . '</a><br />
+						<div class="job_description" style="font-weight: bold">' . $j -> jobDescription . '</div></div>
+						<br />';
+			}
+		?>
 			foreach($employers as $e){
 
 				echo '	<div class="employer employer_' . $e -> employerId . '">
