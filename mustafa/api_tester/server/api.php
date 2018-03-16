@@ -3,9 +3,15 @@
 	// load our library of functions
 	require('db_simple.php');
 
+<<<<<<< HEAD
 	// READ INPUT
 	$req = json_decode(file_get_contents('php://input'), true);
 
+=======
+
+	// READ INPUT
+	$req = json_decode(file_get_contents('php://input'), true);
+>>>>>>> 971f080ea73a8cedb51dcdbdf27e9861ee6dff95
 	if(!$req) exit("Bad input.");
 
 
@@ -65,10 +71,16 @@
 
 		break;
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 971f080ea73a8cedb51dcdbdf27e9861ee6dff95
 		// → Filter Jobs (by employer)
 		// @request: EmployerId (int) or EmployerName (string)
 		// @response: List of Jobs.
 
+<<<<<<< HEAD
 		case "FilterJobsByJobEmployer" :
 
 		// Get requested employer
@@ -96,6 +108,8 @@
 
 		break;
 
+=======
+>>>>>>> 971f080ea73a8cedb51dcdbdf27e9861ee6dff95
 
 
 
@@ -120,7 +134,13 @@
 	// @request: jobId (int)
 	// @response: Job Object
 
+<<<<<<< HEAD
 	
+=======
+	// → List Employers.
+	// @request: # of employers (positive int)
+	// @response: List of employers.
+>>>>>>> 971f080ea73a8cedb51dcdbdf27e9861ee6dff95
 
 
 
@@ -129,8 +149,11 @@
 
 	echo json_encode($response, JSON_PRETTY_PRINT);
 
+<<<<<<< HEAD
 	?>
 
+=======
+>>>>>>> 971f080ea73a8cedb51dcdbdf27e9861ee6dff95
 
 
 
