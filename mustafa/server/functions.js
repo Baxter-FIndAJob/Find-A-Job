@@ -1,5 +1,3 @@
-
-
 var recentSearchHolder = document.getElementById("recent-search-holder");
 var filterHolder = document.getElementById("filter-holder")
 var searchLocationHolder = document.getElementById("search-location-holder")

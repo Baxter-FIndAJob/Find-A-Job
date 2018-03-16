@@ -158,8 +158,6 @@ html, body{
     user-select: none;  
 }
 
-
-
 .filter_search div b.smaller_title{
     font-family: 'Roboto';
     font-weight: 500;
@@ -180,7 +178,6 @@ html, body{
     display: block;
     text-align: center;
 }
-
 
 .filter_search div div.distance_slider{
     width: 100%;
@@ -207,7 +204,6 @@ html, body{
     width: 90%;
 }
 
-
 .filter_search div div.distance_slider div.circle{
     width: 10px;
     height: 10px;
@@ -231,7 +227,6 @@ html, body{
     cursor: pointer;
     user-select: none;
 }
-
 
 .filter_search div.experience a.active{
     background: #312a2a;
