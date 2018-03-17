@@ -1,6 +1,4 @@
 <?php
-
-	
 	// fetch employers
 	$sqle = 'SELECT * FROM employers';
 	$employers = get_list($sqle);
