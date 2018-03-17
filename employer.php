@@ -17,8 +17,6 @@
 	$sql = 'SELECT * FROM employers WHERE employerId = ' . $employerId;
 	$employer = get_list($sql)[0];
 
-	print_R($employer);
-
 
 	// fetch jobs
 	$sql = 'SELECT * FROM jobs  WHERE employerId = ' . $employerId;
@@ -32,7 +30,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Document</title>
-		<link href="websitedesign.css" type="text/css" rel="stylesheet">
+		<link href="websitedesign.css?v=<?php echo time();?>" type="text/css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,100" rel="stylesheet">
 	</head>
 	<body>
@@ -41,7 +39,6 @@
 			foreach($jobs as $j){
 				echo 
 					'	<div>
-						<a class="employer_name"href="?e=' . $j -> employerId . '">' . $j -> employerName . '</a><br />
 						<a class="job_title" href="?j=' . $j -> jobId . '" style="font-style: italic">' . $j -> jobTitle . '</a><br />
 						<div class="job_description" style="font-weight: bold">' . $j -> jobDescription . '</div></div>
 						<br />';

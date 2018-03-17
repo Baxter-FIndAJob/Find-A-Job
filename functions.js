@@ -1,5 +1,3 @@
-
-
 var recentSearchHolder = document.getElementById("recent-search-holder");
 var filterHolder = document.getElementById("filter-holder")
 var searchLocationHolder = document.getElementById("search-location-holder")
@@ -13,8 +11,7 @@ function toggleLevel(el){
 	var lvl3 = document.getElementById("lvl3");
 	var lvl4 = document.getElementById("lvl4");
 	var lvl5 = document.getElementById("lvl5");
-				
-<<<<<<< HEAD
+
 		lvl1.classList.remove("active");
 		lvl2.classList.remove("active");
 		lvl3.classList.remove("active");
@@ -22,37 +19,29 @@ function toggleLevel(el){
 		lvl5.classList.remove("active");
 		
 		el.classList.add("active");	
-=======
-	lvl1.classList.remove("active");
-	lvl2.classList.remove("active");
-	lvl3.classList.remove("active");
-	lvl4.classList.remove("active");
-	lvl5.classList.remove("active");
-
-	el.classList.add("active");	
-
->>>>>>> 971f080ea73a8cedb51dcdbdf27e9861ee6dff95
 };
 
 function createTag(dom, string, parent, type){
-	var tagParent = parent;
+	var tagParent = parent
 		if(tagParent == null){
 			console.log('fail')
+			console.log(string)
 			return
 		};
 	var newElement = document.createElement(dom);
 		newElement.className = type + " " + string;
 		newElement.textContent = string;
 
-	if(tagParent == recentSearchHolder){
+
+	if(tagParent == "recentSearchHolder"){
 		recentSearchHolder.insertBefore(newElement,recentSearchHolder.firstChild);
 	}else{	
-	if(tagParent == searchLocationHolder){
+	if(tagParent == "searchLocationHolder"){
 		newElement.setAttribute("onclick","removeTag(this," + '"' + type + '"'+")");
 		searchLocationHolder.appendChild(newElement);
 		latestLocation = string;
 	}else{
-	if(tagParent == searchJobHolder){
+	if(tagParent == "searchJobHolder"){
 		newElement.setAttribute("onclick","removeTag(this," + '"' + type + '"'+")");
 		searchJobHolder.appendChild(newElement);
 		latestJob = string;
@@ -94,11 +83,11 @@ function removeTag(tag,type){
 
 
 
-createTag("a","Portland, ME", searchLocationHolder, "location" )
-createTag("a","Sandwich Artist", searchJobHolder, "job" )
+createTag("a","Portland, ME","searchLocationHolder", "location" )
+createTag("a","Sandwich Artist","searchJobHolder", "job" )
 
 
-createTag("a",latestLocation, recentSearchHolder, "search" )
-createTag("a",latestJob, recentSearchHolder, "search" )
+createTag("a",latestLocation,"recentSearchHolder", "search" )
+createTag("a",latestJob,"recentSearchHolder", "search" )
 
 

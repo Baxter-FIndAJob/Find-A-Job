@@ -27,7 +27,7 @@
 		<!-- HEADER -->
 		<div id="header" class="header">
 			<div class="search container">
-				
+
 			</div>
 			<div class="text container">
 				<div class="left">
@@ -44,9 +44,14 @@
 				</div>
 			</div>
 		</div>
-
 		<!-- SIDEBAR FILTER -->
 		<div class="sidebar_holder">
+			<div class="recent_searches">
+					<b class="title" onclick="">RECENT SEARCHES</b>
+					<ul id="recent-search-holder">
+					</ul>
+			</div>
+
 			<div class="filter_search">
 				<b class="title">FILTER SEARCH</b>
 				<div id="filter-holder" class="filters">
@@ -68,7 +73,7 @@
 				</div>
 			
 				<div class="distane">
-					<b class="smaller_title">DISTANCE</b><br><br>
+					<b class="smaller_title">DISTANCE</b><br>
 					<b class="v2smaller_title center">5 Miles</b>
 					<div class="distance_slider">
 						<div class="circle"></div>
@@ -101,7 +106,7 @@
 
 				<div class="sort_by">
 					<b class="smaller_title">SORT BY</b><br>
-						<b class="v2smaller_title">Verification</b><i class="fas fa-check" classtype="icon"></i><br>
+						<b class="v2smaller_title">Business</b><i class="fas fa-check" classtype="icon"></i><br>
 							<div class="toggle_button" onclick="this.classList.toggle('active')">
 								<div class="inner_circle"></div>
 							</div>
@@ -111,11 +116,7 @@
 							</div>
 				</div>
 				
-				<div class="recent_searches">
-					<b class="title" onclick="">RECENT SEARCHES</b>
-					<ul id="recent-search-holder">
-					</ul>
-				</div>
+				
 			</div>
 		</div>
 
@@ -123,28 +124,45 @@
 		<!-- PAGE HOLDER -->
 		<div class="page_holder">
 			
-			
-
-			
 			<?php
+				foreach($sponsoredJob as $sj){
+					echo '	<div class="job_holder" >
+								<a class="job_sponsored">SPONSORED JOB</a><br />
+								<a class="job_title" href="?j=' . $sj -> jobId . '">' . $sj -> jobTitle . '</a><br />
+								<a class="employer_name" href="employer.php/?e=' . $sj -> employerId . '">' . $sj -> employerName . '</a><br />
+								<h3 class="job_location">' . $sj -> jobLocation . '</h3><br />
+								<div class="job_description" ">' . $sj -> jobDescription . '</div>
+					</div>
+					';
+				}
+
+				foreach($sponsoredEmployer as $se){
+					echo '	<div class="employer_holder" >
+								<a class="employer_sponsored">SPONSORED EMPLOYER</a><br />
+								<a class="employer_name" href="employer.php/?e=' . $se -> employerId . '">' . $se -> employerName . '</a><br />
+								<div class="employer_description" ">' . $se -> employerDescription . '</div>
+					</div>
+					';
+				}
 			
 				foreach($jobs as $j){
 					echo 
 						'	<div class="job_holder" >
-								<a class="employer_name" href="?e=' . $j -> employerId . '">' . $j -> employerName . '</a><br />
-								<a class="job_title" href="?j=' . $j -> jobId . '" style="font-style: italic">' . $j -> jobTitle . '</a><br />
-								<div class="job_description" style="font-weight: bold">' . $j -> jobDescription . '</div>
+								<a class="job_title" href="?j=' . $j -> jobId . '">' . $j -> jobTitle . '</a><br />
+								<a class="employer_name" href="employer.php/?e=' . $j -> employerId . '">' . $j -> employerName . '</a><br />
+								<h3 class="job_location">' . $j -> jobLocation . '</h3><br />
+								<div class="job_description" ">' . $j -> jobDescription . '</div>
 							</div>';
 				}
 			
-				foreach($employers as $e){
+				//foreach($employers as $e){
 
-					echo '	<div class="job_holder employer employer_' . $e -> employerId . '">
-								<a href="employer.php?e=' . $e-> employerId . '"><b>' . $e -> employerName . '</b></a>
-								<p>' . $e -> employerLocation . '</p>
-							</div>
-							';
-				}
+					//echo '	<div class="job_holder employer employer_' . $e -> employerId . '">
+								//<a href="employer.php?e=' . $e-> employerId . '"><b>' . $e -> employerName . '</b></a>
+								//<p>' . $e -> employerLocation . '</p>
+							//</div>
+						//	';
+				//}
 
 			?> 
 	
@@ -209,8 +227,6 @@
 		</div>
 
 		
-		
-	
-		<script src="functions.js?v=<?php echo time();?>" type="text/javascript"></script>
 	</body>
+	<script src="functions.js?v=<?php echo time();?>" type="text/javascript"></script>
 </html>
