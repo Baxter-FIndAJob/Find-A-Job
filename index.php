@@ -1,17 +1,12 @@
-<!--
-
 <?php 
-	// load our library of functions
+	// logging into our database and loading our library of functions
 	require('db_simple.php');
 
 
 	// load our data
 	require('load_data.php');
 
-?>
-
--->
-<!DOCTYPE html>
+?><!DOCTYPE html>
 	<html lang="en">
 	<head>
 		<meta charset="UTF-8">
