@@ -3,10 +3,7 @@ html, body{
     padding: 0;
     background: #fbfbfb;
     min-height: 100%;
-
 }
-
-
 
 .header{
     width: 100%;
@@ -15,6 +12,7 @@ html, body{
     border-bottom: 1px solid #ded9d9;
     box-shadow: 0px 0px 5px #dcdcdc;
     position: fixed;
+    z-index: 1;
 }
 
 .header .search{
@@ -30,6 +28,11 @@ html, body{
     margin: 0px 10px;
 }
 
+.header .text{
+    display: inline-block;
+    width: 100%;
+}
+
 .header .text .left a.textContent{
     padding: 5px 10px;
     margin: 5px;
@@ -42,7 +45,6 @@ html, body{
     border: 2px solid #fff;
     cursor: pointer;
     text-decoration: none;
-    transition: all .25s;
     outline: none;
 } 
 
@@ -62,6 +64,7 @@ html, body{
     font-family: 'Roboto';
     font-weight: 401;
     font-size: 14px;
+    color: #312a2a;
     display: block;
     float: left;
     border: 2px solid #fff;
@@ -96,21 +99,17 @@ html, body{
     color: #ffffff;
 }
 
-
-
-
 .sidebar_holder{
     width: 230px;
     position: fixed;
-    
-    left: 50%;
-    margin-left: -500px;
-
-    top: 150px;
-    background: #ffffff;
-    box-shadow: 0px 0px 5px #b5b5b5;
+    margin-left:  50%;
+    left: -500px;
+    top: 110px;
     border-radius: 5px;
     padding: 6px 10px;
+    background: #ffffff;
+    border-bottom: 1px solid #ded9d9;
+    box-shadow: 0px 0px 5px #dcdcdc;
 }
 
 .sidebar_holder div b.title{
@@ -128,6 +127,7 @@ html, body{
 
 .sidebar_holder .recent_searches ul{
     margin: 0px;
+    margin-bottom: 15px;
     padding: 0px;
 }
 
@@ -169,6 +169,8 @@ html, body{
     font-size: 12px;
     color: #5a5a5a;
     user-select: none;
+    display: inline-block;
+    margin: 5px 0px;
 }
 
 .filter_search div b.v2smaller_title{
@@ -282,16 +284,98 @@ html, body{
     padding-top: 120px;
 }
 
+.employer_holder {
+    background: #ffffff;
+    box-shadow: 0px 0px 5px #b5b5b5;
+    border-radius: 5px;
+    padding: 6px 10px;
+    margin: 5px;
+}
+
+.employer_holder a.employer_sponsored{
+    font-family: 'Roboto';
+    text-decoration: none;
+    color: #4282d5;
+    font-weight: 570;
+    font-size: 13px;
+    display: inline-block;
+}
+
+.employer_holder a.employer_name{
+    font-family: 'Roboto';
+    text-decoration: none;
+    color: #3d76c2;
+    font-weight: 570;
+    font-size: 16px;
+    display: inline-block;
+    margin:  1px;
+}
+
+.employer_holder div.employer_description{
+    font-family: 'Roboto';
+    text-decoration: none;
+    color: #322a2a;
+    font-weight: 550;
+    font-size: 13px;
+    display: inline-block;
+    margin: 0px 5px;
+}
+
 .job_holder {
     background: #ffffff;
     box-shadow: 0px 0px 5px #b5b5b5;
     border-radius: 5px;
     padding: 6px 10px;
-    margin-bottom: 25px;
+    margin: 5px;
 }
 
+.job_holder a.job_sponsored{
+    font-family: 'Roboto';
+    text-decoration: none;
+    color: #4282d5;
+    font-weight: 570;
+    font-size: 13px;
+    display: inline-block;
+}
 
+.job_holder a.job_title{
+    font-family: 'Roboto';
+    text-decoration: none;
+    color: #3d76c2;
+    font-weight: 570;
+    font-size: 16px;
+    display: inline-block;
+    margin:  1px;
+}
 
+.job_holder a.employer_name{
+    font-family: 'Roboto';
+    text-decoration: none;
+    color: #322a2a;
+    font-weight: 570;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.job_holder h3.job_location{
+    margin: 0px;
+    padding: 0px;
+    color: #322a2a;
+    font-family: 'Roboto';
+    font-weight: 550;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.job_holder div.job_description{
+    font-family: 'Roboto';
+    text-decoration: none;
+    color: #322a2a;
+    font-weight: 550;
+    font-size: 13px;
+    display: inline-block;
+    margin: 0px 5px;
+}
 
 /** Footer **/
 .footer_menu{
