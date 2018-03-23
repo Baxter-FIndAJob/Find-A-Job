@@ -112,7 +112,6 @@
 	}
 
 
-	
 	// LOOK UP INFORMATION FOR A PARTICULAR USER
 	function login_user(){
 
