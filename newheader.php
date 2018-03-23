@@ -140,7 +140,7 @@
 					echo '	<div class="job_holder" >
 								<a class="job_sponsored">SPONSORED JOB</a><br />
 								<a class="job_title" href="?j=' . $sj -> jobId . '">' . $sj -> jobTitle . '</a><br />
-								<a class="employer_name" href="employer.php/?e=' . $sj -> employerId . '">' . $sj -> employerName . '</a><br />
+								<a class="employer_name" href="employer.php?e=' . $sj -> employerId . '">' . $sj -> employerName . '</a><br />
 								<h3 class="job_location">' . $sj -> jobLocation . '</h3><br />
 								<div class="job_description" ">' . $sj -> jobDescription . '</div>
 					</div>
@@ -150,7 +150,7 @@
 				foreach($sponsoredEmployer as $se){
 					echo '	<div class="employer_holder" >
 								<a class="employer_sponsored">SPONSORED EMPLOYER</a><br />
-								<a class="employer_name" href="employer.php/?e=' . $se -> employerId . '">' . $se -> employerName . '</a><br />
+								<a class="employer_name" href="employer.php?e=' . $se -> employerId . '">' . $se -> employerName . '</a><br />
 								<div class="employer_description" ">' . $se -> employerDescription . '</div>
 					</div>
 					';
@@ -160,7 +160,7 @@
 					echo 
 						'	<div class="job_holder" >
 								<a class="job_title" href="?j=' . $j -> jobId . '">' . $j -> jobTitle . '</a><br />
-								<a class="employer_name" href="employer.php/?e=' . $j -> employerId . '">' . $j -> employerName . '</a><br />
+								<a class="employer_name" href="employer.php?e=' . $j -> employerId . '">' . $j -> employerName . '</a><br />
 								<h3 class="job_location">' . $j -> jobLocation . '</h3><br />
 								<div class="job_description" ">' . $j -> jobDescription . '</div>
 							</div>';

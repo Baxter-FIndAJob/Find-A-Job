@@ -9,7 +9,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Document</title>
-		<link href="/jobquery/emp.css?v=<?php echo time();?>" type="text/css" rel="stylesheet">
+		<link href="emp.css?v=<?php echo time();?>" type="text/css" rel="stylesheet">
 		<link rel="icon" type="/img/png" href="/jobquery/assets/images/search_img.png">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,100" rel="stylesheet">
 		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
@@ -37,7 +37,7 @@
 					<a class="text_content blog">BLOG</a>
 					<a class="text_content about">ABOUT</a>
 					<a class="text_content faq">FAQ</a>
-					<a class="text_content language">EN</a><img src="/jobquery/assets/images/globe_img.png" class="language_globe">
+					<a class="text_content language">EN</a><img src="assets/images/globe_img.png" class="language_globe">
 				</div>				
 			</div>
 		</div>
@@ -72,7 +72,7 @@
 		<!-- FOOTER MENU -->
 		<div class="footer_menu">
 			<br>
-				<img src="/jobquery/assets/images/companyLogo.png" class="company_logo" />
+				<img src="assets/images/companyLogo.png" class="company_logo" />
 			<br>
 			<br>
 					
@@ -87,7 +87,7 @@
 				<div class="inactive_selection" data-type="inactive">
 					<a>View more</a>		
 				</div>
-					<img src="/jobquery/assets/images/globe_img.png" class="language_globe" />
+					<img src="assets/images/globe_img.png" class="language_globe" />
 				</div>
 
 				<!-- FOOTER COLUMN 2 -->
