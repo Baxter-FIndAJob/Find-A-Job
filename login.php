@@ -1,3 +1,8 @@
+<?php>
+	require("login_data.php");
+?>
+
+
 <!DOCTYPE html>
 	<html lang="en">
 	<head>
@@ -9,25 +14,37 @@
 		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 	</head>
 	<body>
+		<!-- HEADER -->
 		<div id="header" class="header">
-			<div class="text_container">
-				<a class="txtContent Login" href="">SIGN UP</a>
-				<a class="txtContent Signup" href="login.php">SIGN IN</a>
-				<a class="txtContent Sponsorship" href="">Sponsorship</a>
-				<a class="txtContent FAQ" href="">FAQ</a>
-				<a class="txtContent About" href="">About</a>
+			<div class="search container">
+
+			</div>
+			<div class="text container">
+				<div class="left">
+					<a class="textContent view_jobs" href="/findajob">View Jobs</a>
+					<a class="textContent view_companies">View Companies</a>
+					<a class="textContent sponsorship">Become a Sponsor</a>
+				</div>
+				<div class="right">
+					<a class="textContent blog">Blog</a>
+					<a class="textContent about">About</a>
+					<a class="textContent faq">FAQ</a>
+					<a class="textContent login">Login</a>
+					<a class="textContent signup" href="login.php">Become a Member</a>
+				</div>
 			</div>
 		</div>
 
 		<div id="page_holder" class="page_holder">
-			<div class="form_holder">
+			<div class="form_holder" method="post" action="login.php" >
 				<div class="form_options">
 					<h4 class="active_selection">Sign Up</h4>
 					<h4 class="inactive_selection">Login</h4>
 				</div>
+
 				<div class="login_holder" class-type="active_selection">
 					<div class="inputwithText" class-type="Email">
-						<input class="Input" maxlength="255" type="Email" placeholder="Email">
+						<input class="Input" maxlength="255" type="Text" placeholder="Username">
 						 <i class="fas fa-envelope"></i>
 					</div>
 					<div class="inputwithText" class-type="Password">

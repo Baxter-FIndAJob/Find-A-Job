@@ -9,31 +9,39 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Document</title>
-		<link href="/findajob/emp.css?v=<?php echo time();?>" type="text/css" rel="stylesheet">
+		<link href="/jobquery/emp.css?v=<?php echo time();?>" type="text/css" rel="stylesheet">
+		<link rel="icon" type="/img/png" href="/jobquery/assets/images/search_img.png">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,100" rel="stylesheet">
 		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 	</head>
 	<body>
 		<!-- HEADER -->
-		<div id="header" class="header">
-			<div class="search container">
-
+		<div class="header">
+			<div class="top container">
+				<div class="text_container right">
+					<a class="text_content login">LOGIN</a>
+					<a class="text_content signup">SIGNUP</a>
+				</div>
+				
 			</div>
-			<div class="text container">
-				<div class="left">
-					<a class="textContent view_jobs">View Jobs</a>
-					<a class="textContent view_jobs">View Companies</a>
-					<a class="textContent sponsorship">Become a Sponsor</a>
+			<div class="bottom container">
+				<div class="text_container left">
+					<a class="text_content view_jobs">VIEW JOBS</a>
+					<a class="text_content view_companies">VIEW COMPANIES</a>
+					<a class="text_content sponsorship">BECOME A SPONSOR</a>
+					<a class="text_content work_permit">WORK PERMIT</a>
+					<input type="text" class="search_content job_search" placeholder="Search by Job title" hidden="true" />
+					<input type="text" class="search_content location_search" placeholder="Search by Location" hidden="true" />
 				</div>
-				<div class="right">
-					<a class="textContent blog">Blog</a>
-					<a class="textContent about">About</a>
-					<a class="textContent faq">FAQ</a>
-					<a class="textContent login">Login</a>
-					<a class="textContent signup" href="login.php">Become a Member</a>
-				</div>
+				<div class="text_container right">
+					<a class="text_content blog">BLOG</a>
+					<a class="text_content about">ABOUT</a>
+					<a class="text_content faq">FAQ</a>
+					<a class="text_content language">EN</a><img src="/jobquery/assets/images/globe_img.png" class="language_globe">
+				</div>				
 			</div>
 		</div>
+
 		<!-- PAGE HOLDER -->
 		<div class="page_holder">
 			<div class="user_container">
@@ -59,43 +67,27 @@
 				</div>
 			</div>
 
-
-			<div class="job_holder">
-			<?php
-				//foreach($jobs as $j){
-				//	echo 
-				//		'	<div>
-				//			<a class="job_title" href="?j=' . $j -> jobId . '" style="font-style: italic">' . $j -> jobTitle . '</a><br />
-				//			<div class="job_description" style="font-weight: bold">' . $j -> jobDescription . '</div></div>
-				//			<br />';
-				//}
-			?>
-			</div>
-		<div class="jobs_container">
-
-		</div>
 		</div>
 
 		<!-- FOOTER MENU -->
-			<div class="footer_menu">
-				<br>
-					<img src="/findajob/companyLogo.png" class="company_logo" />
-				<br>
-				<br>
+		<div class="footer_menu">
+			<br>
+				<img src="/jobquery/assets/images/companyLogo.png" class="company_logo" />
+			<br>
+			<br>
 					
-				<!-- FOOTER COLUMN 1 -->
-				<div class="footer_column">
-					<div class="selection_name">
-						<h4>Language</h4>	
-					</div>
-					<div class="inactive_selection" data-type="inactive">
-						<a href="about.html">English (US)</a>
-					</div>
-					<div class="inactive_selection" data-type="inactive">
-						<a>View more</a>	
-						
-					</div>
-					<img src="/findajob/globe_img.png" class="language_globe" />
+			<!-- FOOTER COLUMN 1 -->
+			<div class="footer_column">
+				<div class="selection_name">
+					<h4>Language</h4>	
+				</div>
+				<div class="inactive_selection" data-type="inactive">
+					<a href="about.html">English (US)</a>
+				</div>
+				<div class="inactive_selection" data-type="inactive">
+					<a>View more</a>		
+				</div>
+					<img src="/jobquery/assets/images/globe_img.png" class="language_globe" />
 				</div>
 
 				<!-- FOOTER COLUMN 2 -->
@@ -128,11 +120,8 @@
 					<div class="inactive_selection" data-type="inactive">
 						<a href="blog.html">Blog</a>
 					</div>
-				</div>	
-
-				<div style="clear: both;"></div>
-			
-
+				</div>
+			</div>
 		
 	</body>
 </html>
