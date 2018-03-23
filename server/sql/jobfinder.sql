@@ -86,3 +86,14 @@ ALTER TABLE `employers`
 --
 ALTER TABLE `jobs`
   MODIFY `jobId` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+
+
+
+
+
+
+-- UPDATE Mar 23
+ALTER TABLE `employers` ADD `anus` INT NOT NULL AFTER `employerLocation`; 
+
+
+
