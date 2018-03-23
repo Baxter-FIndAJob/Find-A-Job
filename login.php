@@ -15,54 +15,50 @@
 	</head>
 	<body>
 		<!-- HEADER -->
-		<div id="header" class="header">
-			<div class="search container">
-
+		<div class="header">
+			<div class="top container">
+				<div class="text_container right">
+					<a class="text_content login">LOGIN</a>
+					<a class="text_content signup">SIGNUP</a>
+				</div>
+				
 			</div>
-			<div class="text container">
-				<div class="left">
-					<a class="textContent view_jobs" href="/findajob">View Jobs</a>
-					<a class="textContent view_companies">View Companies</a>
-					<a class="textContent sponsorship">Become a Sponsor</a>
+			<div class="bottom container">
+				<div class="text_container left">
+					<a class="text_content view_jobs">VIEW JOBS</a>
+					<a class="text_content view_companies">VIEW COMPANIES</a>
+					<a class="text_content sponsorship">BECOME A SPONSOR</a>
+					<a class="text_content work_permit">WORK PERMIT</a>
+					<input type="text" class="search_content job_search" placeholder="Search by Job title" hidden="true" />
+					<input type="text" class="search_content location_search" placeholder="Search by Location" hidden="true" />
 				</div>
-				<div class="right">
-					<a class="textContent blog">Blog</a>
-					<a class="textContent about">About</a>
-					<a class="textContent faq">FAQ</a>
-					<a class="textContent login">Login</a>
-					<a class="textContent signup" href="login.php">Become a Member</a>
-				</div>
+				<div class="text_container right">
+					<a class="text_content blog">BLOG</a>
+					<a class="text_content about">ABOUT</a>
+					<a class="text_content faq">FAQ</a>
+					<a class="text_content language">EN</a><img src="assets/images/globe_img.png" class="language_globe">
+				</div>				
 			</div>
 		</div>
 
 		<div id="page_holder" class="page_holder">
-			<div class="form_holder" method="post" action="login.php" >
-				<div class="form_options">
-					<h4 class="active_selection">Sign Up</h4>
-					<h4 class="inactive_selection">Login</h4>
-				</div>
-
-				<div class="login_holder" class-type="active_selection">
-					<div class="inputwithText" class-type="Email">
-						<input class="Input" maxlength="255" type="Text" placeholder="Username">
-						 <i class="fas fa-envelope"></i>
-					</div>
-					<div class="inputwithText" class-type="Password">
-						<input class="Input" maxlength="255" type="Password" placeholder="Password">
-						<i class="fas fa-key"></i>
-					</div>
+			<div class="form_holder" method="post">
+				<form class="signup_container active_selection" onsubmit="return validate();">
+					<input id="firstName" placeholder="enter first name" / type="Text">
+					<input id="lastName" placeholder="enter last name" / type="Text">
+					<input id="email" placeholder="enter email" / type="Email">
+					<input id="password" placeholder="enter password" / type="Password">
+					<input id="retypePassword" placeholder="retype password" / type="Password">
 					<br>
-					<button type="submit" class="submit">Login</button>
-					<h3>OR</h3>
-					<h4>Forgot your password?</h4>
-				</div>
+					<button type="submit" value="register" class="button">Login</button>
+				</form>
 			</div>
 		</div>
 		<br>
 		<br>
 		<div class="footer_menu">
 			<br>
-				<img src="companyLogo.png" class="company_logo" />
+				<img src="assets/images/companyLogo.png" class="company_logo" />
 			<br>
 			<br>
 				<!-- FOOTER COLUMN 1 -->
@@ -77,7 +73,7 @@
 						<a>View more</a>	
 						
 					</div>
-					<img src="globe_img.png" class="language_globe" />
+					<img src="assets/images/globe_img.png" class="language_globe" />
 				</div>
 
 				<!-- FOOTER COLUMN 2 -->
@@ -115,5 +111,5 @@
 				<div style="clear: both;"></div>
 			</div>
 		</div>
-
+		<script src="validate.js?v=<?php echo time();?>" type="text/javascript"></script>
 	</body>
