@@ -83,11 +83,11 @@ function removeTag(tag,type){
 
 
 
-createTag("a","Portland, ME","searchLocationHolder", "location" )
-createTag("a","Sandwich Artist","searchJobHolder", "job" )
+// createTag("a","Portland, ME","searchLocationHolder", "location" )
+// createTag("a","Sandwich Artist","searchJobHolder", "job" )
 
 
-createTag("a",latestLocation,"recentSearchHolder", "search" )
-createTag("a",latestJob,"recentSearchHolder", "search" )
+// createTag("a",latestLocation,"recentSearchHolder", "search" )
+// createTag("a",latestJob,"recentSearchHolder", "search" )
 
 

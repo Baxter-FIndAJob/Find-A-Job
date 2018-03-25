@@ -148,7 +148,9 @@
 		
 
 
-<?php
-	// html footer
-	require('_includes/footer.php');
-?>
+			<?php
+				// html footer
+				require('_includes/footer.php');
+			?>
+			<script src="client/js/functions.js?v=<?php echo time();?>" type="text/javascript"></script>
+		</div>

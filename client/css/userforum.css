@@ -1,0 +1,113 @@
+.form_holder{
+    width: 500px;
+    padding: 15px 0px;
+    margin: 0px auto;
+    margin-left: -50px;
+    height: auto;
+    background: #fefefe;
+    border: 1px solid #b9bbbb;
+    border-radius: 5px;
+}
+
+.form_holder div.options_container{
+    display: inline-block;
+    text-align: center;
+    margin: 0px auto;
+    margin-left: 50%;
+    position: relative;
+    right: 85px;
+}
+
+.form_holder div.options_container button.options{
+    padding: 5px 10px;
+    margin: 5px;
+    float: left;
+    color: #555454;
+    font-weight: 500;
+    font-family: 'Roboto';
+    background: none;
+    border: 1px solid #b9bbbb;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+.form_holder div.options_container button.active{
+    background: #555454;
+    color: #ffffff;
+}
+
+.form_holder form{
+    max-width: 300px;
+    margin: 0px auto;
+}
+
+.form_holder form{
+    text-align: center;
+}
+
+.form_holder form div{
+    display: inline-block;
+    width: 100%;
+}
+
+.form_holder form div b{
+    font-family: 'Roboto';
+    font-size: 12px;
+    font-weight: 520;
+    color: #555454;
+    margin-left: 5px;
+    margin-top: 5px;
+    display: block;
+    text-align: left;
+}
+
+.form_holder form div input{
+    background: none;
+    border: 1px solid #b8bbbb;
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    padding-left: 5px;
+    outline: none;
+}
+
+.form_holder form div input.email{
+    background-image: url(/client/images/icons/globe_img.png);
+    background-position: 4px 6px;
+    background-size: 25px 19px;
+    background-repeat: no-repeat;
+}
+.form_holder form div.firstname_holder{
+    width: 140px;
+    margin-right: 5px;
+}
+
+.form_holder form div.lastname_holder{
+    width: 150px;
+}
+.form_holder form b{
+    font-family: 'Roboto';
+    color: #555454;
+    font-weight: 450;
+    font-size: 12px;
+}
+
+.form_holder form b.forgot_password{
+    text-align: right;
+}
+
+.form_holder form button{
+    background: #555454;
+    color: #ffffff;
+    padding: 5px 15px;
+    margin: 0px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 14px;
+    border: 2px solid #ffffff00;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+}
+

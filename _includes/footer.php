@@ -53,6 +53,7 @@
 
 		
 		</div>
-			<script src="client/js/functions.js?v=<?php echo time();?>" type="text/javascript"></script>
+			<!-- <script src="client/js/functions.js?v=<?php //echo time();?>" type="text/javascript"></script>
+			<script src="client/js/validate.js?v=<?php //echo time();?>" type="text/javascript"></script> -->
 	</body>
 </html>

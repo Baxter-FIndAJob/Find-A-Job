@@ -4,7 +4,9 @@
 		<meta charset="UTF-8">
 		<title>Job Query - Login</title>
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,100" rel="stylesheet">
-		<link rel="icon" type="/img/png" href="client/images/search_img.png">
+		<link rel="icon" type="/img/png" href="client/images/icons/search_img.png">
+		<link href="client/css/headercss.css?v=<?php echo time();?>" type="text/css" rel="stylesheet">
+		<link href="client/css/footercss.css?v=<?php echo time();?>" type="text/css" rel="stylesheet">
 		<link href="client/css/jobfinder.css?v=<?php echo time();?>" type="text/css" rel="stylesheet">
 	</head>
 	<body>
@@ -13,7 +15,7 @@
 			<div class="top container">
 				<div class="text_container right">
 					<a class="text_content login">LOGIN</a>
-					<a class="text_content signup">SIGNUP</a>
+					<a class="text_content signup" href="login.php">SIGNUP</a>
 				</div>
 				
 			</div>

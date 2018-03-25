@@ -1,0 +1,45 @@
+/** Footer **/
+.footer_menu{
+    width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer_menu .company_logo{
+    height: 60px;
+    user-select: none;
+}
+
+.footer_menu div.footer_column{
+    text-align: center;
+    float: left;
+    width: 33%;
+}
+
+.footer_menu div.footer_column .selection_name{
+    width: 100%;
+}
+
+.footer_menu div.footer_column div h4{
+    text-decoration: none;
+    color: #929292;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    margin: 0 0 8px;
+}
+
+.footer_menu div.footer_column  div a{
+    text-decoration: none;
+    font-family: "Roboto";
+    font-size: 12px;
+    font-weight: 480;
+    margin: 0;
+    padding: 0;
+    color: #989898;
+}
+
+.footer_menu div.footer_column img.language_globe{
+    width: 30px;
+}
