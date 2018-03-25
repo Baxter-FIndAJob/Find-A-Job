@@ -36,7 +36,7 @@
 				<br>
 				<br>
 				<b>By pressing Sign up you agree to our Terms of Use and Privacy Policy.</b><br><br>
-				<button type="submit" name="register" class="button">Sign up</button>
+				<button type="submit" name="register" class="button">Sign up</button><br><br>
 			</form>
 			<form class="login_container active_selection" id="login_form" onsubmit="return validate('login');" hidden="true" action="server/login.php" method="POST">
 				<div class="form_container email_holder">
@@ -58,4 +58,5 @@
 
 <?php require('_includes/footer.php'); ?>
 <script src="client/js/validate.js?v=<?php echo time();?>" type="text/javascript"></script>
+<script src="client/js/autocheck.js?v=<?php echo time();?>" type="text/javascript"></script>
 </body>

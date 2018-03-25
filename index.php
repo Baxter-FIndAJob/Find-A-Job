@@ -16,6 +16,7 @@
 	require('_includes/header.php');
 
 ?>
+		<link href="client/css/jobfinder.css?v=<?php echo time();?>" type="text/css" rel="stylesheet">
 
 		<!-- SIDEBAR HOLDER -->
 		<div class="sidebar_holder">

@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 	<head>
 		<html lang="eng">
@@ -7,17 +11,25 @@
 		<link rel="icon" type="/img/png" href="client/images/icons/search_img.png">
 		<link href="client/css/headercss.css?v=<?php echo time();?>" type="text/css" rel="stylesheet">
 		<link href="client/css/footercss.css?v=<?php echo time();?>" type="text/css" rel="stylesheet">
-		<link href="client/css/jobfinder.css?v=<?php echo time();?>" type="text/css" rel="stylesheet">
 	</head>
 	<body>
 		<!-- HEADER -->
 		<div class="header">
 			<div class="top container">
-				<div class="text_container right">
-					<a class="text_content login">LOGIN</a>
-					<a class="text_content signup" href="login.php">SIGNUP</a>
-				</div>
-				
+				<?php
+					if(isset($_SESSION['u_Id'])){
+						echo '<div class="text_container right">
+							<form action="server/logout.php" method="POST">
+								<button type="submit" class="text_content logout" name="logout">LOGOUT</button>
+							</form>
+							</div>';
+					}else{
+						echo '<div class="text_container right">
+								<a class="text_content login">LOGIN</a>
+								<a class="text_content signup" href="login.php">SIGNUP</a>
+							</div>';
+					}
+				?>		
 			</div>
 			<div class="bottom container">
 				<div class="text_container left">

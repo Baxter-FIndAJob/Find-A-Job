@@ -5,6 +5,7 @@
 	if(isset($_POST['login'])) {
 		include('jobquery_db.php');
 
+		// locals
 		$email = mysqli_real_escape_string($db, $_POST["login_email"]);
 		$pwd = mysqli_real_escape_string($db, $_POST["login_password"]);
 
@@ -16,38 +17,31 @@
 			exit();
 		}else{
 			if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-			header("Location: ../login.php?information=email");
+			header("Location: ../login.php?login=failed%invalidemail");
 			exit();
 		}else{
-			$sql = "SELECT * FROM users WHERE userEmail = '$email'";
+			$sql = "SELECT * FROM users WHERE userEmail = '$email' AND userPassword = '$hashedpwd'";
 			$result = mysqli_query($db, $sql);
 			$resultCheck = mysqli_num_rows($result);
 
-			if($resultCheck){
-				header("Location: ../index.php?login=sucess");
-				exit();
-			 }else{
-			 	header("Location: ../login.php?login=failed$'$email'");
-				exit();
-			 }
-			// 	if($row = mysqli_fetch_assoc($result)){
-			// 		$hashedpwdCheck = password_verify($pwd, $row['userPassword']);
-			// 		if($hashedpwdCheck == false){
-			// 			header("Location: ../login.php?login=passwordinvalid");
-			// 			exit();
-			// 		}elseif($hashedpwdCheck == true){
-			// 			$_SESSION['u_Id'] = $row['userId'];
-			// 			$_SESSION['u_Email'] = $row['userEmail'];
-			// 			$_SESSION['u_First'] = $row['userFirst'];
-			// 			$_SESSION['u_Last'] = $row['userLast'];
+		if(!$resultCheck){
+			header("Location: ../login.php?login=failed%invalidinformation");
+			exit();
+		}else{
+		if($row = mysqli_fetch_assoc($result)){
+			$_SESSION['u_Id'] = $row['userId'];
+			$_SESSION['u_Email'] = $row['userEmail'];
+			$_SESSION['u_First'] = $row['userFirst'];
+			$_SESSION['u_Last'] = $row['userLast'];
 
-			// 			header("Location: ../login.php?login=success");
-			// 			exit();
-			// 		}
+			header("Location: ..?login=success%" . $row['userId']);
+			exit();
+						}
+				 	}
 				}
 			}
 	}else{
-		header("Location: ../login.php?login=depressed");
+		header("Location: ../login.php");
 		exit();
 	}
 ?>

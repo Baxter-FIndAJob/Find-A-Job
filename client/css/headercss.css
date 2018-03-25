@@ -40,6 +40,13 @@
     color: #ffffff;
 }
 
+.header .top div.right img.profile_picture{
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    border: 1px solid #b9bbbb;
+}
+
 /** BOTTOM HEADER **/
 .header .bottom{
     display: inline-block;
