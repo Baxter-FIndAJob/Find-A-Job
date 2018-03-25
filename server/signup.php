@@ -7,6 +7,8 @@
 		$email = mysqli_real_escape_string($db, $_POST["signup_email"]);
 		$pwd = mysqli_real_escape_string($db, $_POST["signup_password"]);
 
+		$hashedPwd = md5($pwd);
+
 		// errors handeler
 		if(!preg_match("/^[a-zA-Z ]*$/", $first) || !preg_match("/^[a-zA-Z ]*$/", $last)){
 			header("Location: ../login.php?information=invalid");
@@ -16,16 +18,16 @@
 			header("Location: ../login.php?information=email");
 			exit();
 		}else{
-			$sqlemail = 'SELECT * FROM users WHERE userEmail = "$email"';
-			$result = mysqli_query($db, $sqlemail);
-			$resultCheck = count($result);
+			$sql = "SELECT * FROM users WHERE userEmail = '$email'";
+			$result = mysqli_query($db, $sql);
+			$resultCheck = mysqli_num_rows($result);
 
-		if ($resultCheck > 0){
-        	header("Location: ../login.php?information=emailtaken%" . $resultCheck);
+			if($resultCheck){
+        	header("Location: ../login.php?information=emailtaken%" . $email);
 			exit();
 		}else{
 			// hashtag the password
-				$hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
+				
 				echo($hashedPwd);
 			// insert the user into the database
 				$sqlnewUser = "INSERT INTO users (userEmail,userFirst,userLast,userPassword) VALUES ('$email','$first','$last','$hashedPwd');";

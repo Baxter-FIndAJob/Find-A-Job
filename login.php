@@ -41,7 +41,7 @@
 			<form class="login_container active_selection" id="login_form" onsubmit="return validate('login');" hidden="true" action="server/login.php" method="POST">
 				<div class="form_container email_holder">
 					<b>EMAIL</b>
-					<input id="login_emailInput" name="login_email" maxlength="255" type="email" placeholder="example@gmail.com" />
+					<input id="login_emailInput" name="login_email" maxlength="255" type="text" placeholder="example@gmail.com" />
 				</div>
 				<div class="form_container password_holder">
 					<b>PASSWORD</b>
