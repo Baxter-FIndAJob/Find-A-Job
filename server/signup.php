@@ -23,10 +23,12 @@
 			$result = mysqli_query($db, $sql);
 			$resultCheck = mysqli_num_rows($result);
 
-			if($resultCheck){
+		if($resultCheck){
         	header("Location: ../login.php?signup=failed%email%taken");
 			exit();
 		}else{
+			// hash the password
+			$hashedpwd = md5($pwd);
 			// insert the user into the database
 			$sqlnewUser = "INSERT INTO users (userEmail,userFirst,userLast,userPassword) VALUES ('$email','$first','$last','$hashedPwd');";
 

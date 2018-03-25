@@ -25,7 +25,7 @@
 			$resultCheck = mysqli_num_rows($result);
 
 		if(!$resultCheck){
-			header("Location: ../login.php?login=failed%invalidinformation");
+			header("Location: ../login.php?login=failed%invalid%information");
 			exit();
 		}else{
 		if($row = mysqli_fetch_assoc($result)){

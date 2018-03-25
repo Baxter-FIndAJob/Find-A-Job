@@ -16,4 +16,5 @@
 		}else{
 			echo '<b>email is available!</b>';
 		};
+	};
 ?>

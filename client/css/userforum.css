@@ -112,6 +112,7 @@ html, body{
 
 .form_holder form b.forgot_password{
     text-align: right;
+    cursor: pointer;
 }
 
 .form_holder form button{
