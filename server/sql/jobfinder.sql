@@ -92,8 +92,6 @@ ALTER TABLE `jobs`
 
 
 
--- UPDATE Mar 23
-ALTER TABLE `employers` ADD `anus` INT NOT NULL AFTER `employerLocation`; 
 
 
 

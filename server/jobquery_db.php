@@ -5,7 +5,10 @@
 
 
 	// connect to the database
-	global $db;
+	global $db, $debugMode;
+
+	$debugMode = true;
+
 
 	// if we're in production...
 	if(getcwd() == "/home/robkshar/jobquery.org") {
