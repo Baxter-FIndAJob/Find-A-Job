@@ -8,6 +8,7 @@ html, body{
 /* PAGE HOLDER */
 .page_holder{    
     width: 700px;
+    height: 400px;
     margin: auto;
     padding-left: 300px;
     padding-top: 100px;
@@ -28,10 +29,7 @@ html, body{
 .form_holder div.options_container{
     display: inline-block;
     text-align: center;
-    margin: 0px auto;
-    margin-left: 50%;
-    position: relative;
-    right: 85px;
+    margin: 0px 177px;
 }
 
 .form_holder div.options_container button.options{
@@ -83,9 +81,10 @@ html, body{
     border: 1px solid #b8bbbb;
     border-radius: 5px;
     width: 100%;
-    height: 30px;
+    height: 25px;
     padding-left: 5px;
-    padding-right:  5px;
+    font-size: 13px;
+    padding-right: 5px;
     outline: none;
 }
 
@@ -110,9 +109,23 @@ html, body{
     font-size: 12px;
 }
 
+.form_holder form button b{
+    color: #555454;
+    font-size: 15px;
+    margin-left: 10px;
+    background: #ffffff;
+    padding: 0px;
+    padding-left: 6px;
+    padding-right: 5px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-family: 'Roboto';
+}
+
 .form_holder form b.forgot_password{
     text-align: right;
     cursor: pointer;
+    font-size: 11px;
 }
 
 .form_holder form button{
@@ -128,4 +141,6 @@ html, body{
     border-radius: 5px;
     outline: none;
 }
+
+/* LOGIN EDDITION */
 

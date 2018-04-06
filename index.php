@@ -16,6 +16,7 @@
 	require('_includes/header.php');
 
 ?>
+	<body>
 		<link href="client/css/jobfinder.css?v=<?php echo time();?>" type="text/css" rel="stylesheet">
 
 		<!-- SIDEBAR HOLDER -->
@@ -55,7 +56,7 @@
 					<b class="smaller_title">DISTANCE</b><br>
 					<b class="v2smaller_title center">5 Miles</b>
 					<div class="distance_slider">
-						<div class="circle"></div>
+						<input type="range" min="5" max="200" step="10" value="5">
 					</div>
 				</div>
 
@@ -100,39 +101,88 @@
 
 		<!-- PAGE HOLDER -->
 		<div class="page_holder">
-		
-			
 			<!-- PAGE CONTAINER -->
 			<div class="page_container">
 			<?php
 				foreach($sponsoredJob as $sj){
 					echo '	<div class="job_holder" >
 								<a class="job_sponsored">SPONSORED JOB</a><br />
-								<a class="job_title" href="?j=' . $sj -> jobId . '">' . $sj -> jobTitle . '</a><br />
-								<a class="employer_name" href="employer.php?e=' . $sj -> employerId . '">' . $sj -> employerName . '</a><br />
-								<h3 class="job_location">' . $sj -> jobLocation . '</h3><br />
-								<div class="job_description" ">' . $sj -> jobDescription . '</div>
-					</div>
-					';
+								<div class="column job">
+									<b class="text_container">Job</b><br>
+									<div class="column_container">									
+										<a class="job_title" href="?j=' . $sj -> jobId . '">' . $sj -> jobTitle . '</a><br />
+									</div>
+								</div>
+								<div class="column employer">
+									<b class="text_container">Employer</b>
+									<div class="column_container">									
+										<a class="employer_name" href="employer.php?e=' . $sj -> employerId . '">' . $sj -> employerName . '</a><br />
+									</div>
+								</div>
+								<div class="column location">
+									<b class="text_container">Location</b>
+									<div class="column_container">									
+										<h3 class="job_location">' . $sj -> jobLocation . '</h3><br />
+									</div>
+								</div>
+								<div class="column description">
+									<b class="text_container">Description</b>
+									<div class="column_container">									
+										<div class="job_description" ">' . $sj -> jobDescription . '</div>
+									</div>
+								</div>
+							</div>
+						';
 				}
 
 				foreach($sponsoredEmployer as $se){
 					echo '	<div class="employer_holder" >
 								<a class="employer_sponsored">SPONSORED EMPLOYER</a><br />
-								<a class="employer_name" href="employer.php?e=' . $se -> employerId . '">' . $se -> employerName . '</a><br />
-								<div class="employer_description" ">' . $se -> employerDescription . '</div>
+								<div class="column employer">
+									<b class="text_container">Employer</b>
+									<div class="column_container">
+										<a class="employer_name" href="employer.php?e=' . $se -> employerId . '">' . $se -> employerName . '</a><br />
+									</div>
+								</div>
+								<div class="column description">
+									<b class="text_container">Description</b>
+									<div class="column_container">
+										<div class="employer_description" ">' . $se -> employerDescription . '</div>
+									</div>
+								</div>
 					</div>
 					';
 				}
 			
 				foreach($jobs as $j){
-					echo 
-						'	<div class="job_holder" >
-								<a class="job_title" href="?j=' . $j -> jobId . '">' . $j -> jobTitle . '</a><br />
-								<a class="employer_name" href="employer.php?e=' . $j -> employerId . '">' . $j -> employerName . '</a><br />
-								<h3 class="job_location">' . $j -> jobLocation . '</h3><br />
-								<div class="job_description" ">' . $j -> jobDescription . '</div>
-							</div>';
+					echo '	<div class="job_holder" >
+								<div class="column job">
+									<b class="text_container">Job</b><br>
+									<div class="column_container">									
+										<a class="job_title" href="?j=' . $j -> jobId . '">' . $j -> jobTitle . '</a><br />
+									</div>
+								</div>
+								<div class="column employer">
+									<b class="text_container">Employer</b>
+									<div class="column_container">									
+										<a class="employer_name" href="employer.php?e=' . $sj -> employerId . '">' . $j -> employerName . '</a><br />
+									</div>
+								</div>
+								<div class="column location">
+									<b class="text_container">Location</b>
+									<div class="column_container">									
+										<h3 class="job_location">' . $j -> jobLocation . '</h3><br />
+									</div>
+								</div>
+								<div class="column description">
+									<b class="text_container">Description</b>
+									<div class="column_container">									
+										<div class="job_description" ">' . $j -> jobDescription . '</div>
+									</div>
+								</div>
+								<b class="arrow">></b>
+							</div>
+						';
 				}
 			
 				//foreach($employers as $e){
@@ -146,12 +196,10 @@
 
 			?> 
 			</div>
-		
-
-
 			<?php
 				// html footer
 				require('_includes/footer.php');
 			?>
-			<script src="client/js/functions.js?v=<?php echo time();?>" type="text/javascript"></script>
 		</div>
+		<script src="client/js/functions.js?v=<?php echo time();?>" type="text/javascript"></script>
+	</body>

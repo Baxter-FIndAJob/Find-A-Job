@@ -1,0 +1,15 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    background: #fbfbfb;
+    min-height: 100%;
+}
+
+/* PAGE HOLDER */
+.page_holder{    
+    width: 700px;
+    height: 400px;
+    margin: auto;
+    padding-left: 300px;
+    padding-top: 100px;
+}

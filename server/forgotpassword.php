@@ -7,7 +7,7 @@
 		$email = mysqli_real_escape_string($db, $_POST["reset_email"]);
 
 		if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-			header("Location: ../resetpassword.php?signup=failed%invalid%email");
+			header("Location: ../login.php?email=failed%invalid%email");
 			exit();
 		}else{
 			$sql = "SELECT * FROM users WHERE userEmail = '$email'";
@@ -26,6 +26,9 @@
 			//email($mail,"Reset Password","To reset your password, click here or visit:'$url'")
 
 			$db->query("UPDATE users SET userToken ='$newToken' WHERE userEmail = '$email'");
+
+			mail($email,'Password Request Key', 'The following email has requested for a password change request key. Your key is: "$newToken",urmom@gmail.com');
+
 			header("Location: ../resetpassword.php?");
 			exit();
 		}

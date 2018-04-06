@@ -1,6 +1,9 @@
 // Locals
 var passwordLimit = 6;
 var normalBorder = "1px solid #b8bbbb";
+var errorBorder = "1px solid red";
+var errorBackground = "#ffeded";
+var normalBackground = "none";
 var selectedError;
 var selectedForum = "none";
 var signupbtn = document.getElementById("signup_formOption");
@@ -45,45 +48,45 @@ var resetpwdbtn = document.getElementById("resetpwdbtn");
 			var retypePassword = document.getElementById("signup_confirmPassword");
 
 			if(firstName.value == ""){
-			firstName.style.border = "1px solid red";
+			firstName.style.background = errorBackground;
 			return false;
 			}else{
-				firstName.style.border = normalBorder;
+				firstName.style.background = normalBackground;
 			};
 
 			if(lastName.value == ""){
-				lastName.style.border = "1px solid red";
+				lastName.style.background = errorBackground;
 				return false;
 			}else{
-				lastName.style.border = normalBorder;
+				lastName.style.background = normalBackground;
 			};
 
 			if(email.value == ""){
-				email.style.border = "1px solid red";
+				email.style.background = errorBackground;
 				return false;
 			}else{
-				email.style.border = normalBorder;
+				email.style.background = normalBackground;
 			};
 
 			if(password.value == ""){
-				password.style.border = "1px solid red";
+				password.style.background = errorBackground;
 				return false;
 			}else{
-				password.style.border = normalBorder;
+				password.style.background = normalBackground;
 			};
 
 			if(retypePassword.value == ""){
-				retypePassword.style.border = "1px solid red";
+				retypePassword.style.background = errorBackground;
 				return false;
 			}else{
-				retypePassword.style.border = normalBorder;
+				retypePassword.style.background = normalBackground;
 			};
 
 			if(retypePassword.value != password.value){
-				retypePassword.style.border = "1px solid red";
+				retypePassword.style.background = errorBackground;
 				return false;
 			}else{
-				retypePassword.style.border = normalBorder;
+				retypePassword.style.background = normalBackground;
 			};
 		};
 		if(type == "login"){
@@ -92,23 +95,23 @@ var resetpwdbtn = document.getElementById("resetpwdbtn");
 			var password = document.getElementById("login_passwordInput");
 
 			if(email.value == ""){
-				email.style.border = "1px solid red";
+				email.style.background = errorBackground;
 				return false;
 			}else{
-				email.style.border = normalBorder;
+				email.style.background = normalBackground;
 			};
 			if(password.value == ""){
-				password.style.border = "1px solid red";
+				password.style.background = errorBackground;
 				return false;
 			}else{
-				password.style.border = normalBorder;
+				password.style.background = normalBackground;
 			};
 		};
 		if(type == "resetEmail"){
 			var email = document.getElementById("reset_emailInput");
 
 			if(email.value == ""){
-				email.style.border = "1px solid red";
+				email.style.background = errorBackground;
 				return false;
 			};
 		};
@@ -118,31 +121,31 @@ var resetpwdbtn = document.getElementById("resetpwdbtn");
 			var retypePassword = document.getElementById("reset_passwordConfirmationInput");
 
 			if(code.value == ""){
-				code.style.border = "1px solid red";
+				code.style.background = errorBackground;
 				return false;
 			}else{
-				code.style.border = normalBorder;
+				code.style.background = normalBackground;
 			};
 
 			if(password.value == ""){
-				password.style.border = "1px solid red";
+				password.style.background = errorBackground;
 				return false;
 			}else{
-				password.style.border = normalBorder;
+				password.style.background = normalBackground;
 			};
 
 			if(retypePassword.value == ""){
-				retypePassword.style.border = "1px solid red";
+				retypePassword.style.background = errorBackground;
 				return false;
 			}else{
-				retypePassword.style.border = normalBorder;
+				retypePassword.style.background = normalBackground;
 			};
 
 			if(retypePassword.value != password.value){
-				retypePassword.style.border = "1px solid red";
+				retypePassword.style.background = errorBackground;
 				return false;
 			}else{
-				retypePassword.style.border = normalBorder;
+				retypePassword.style.background = normalBackground;
 			};
 		};
 	};

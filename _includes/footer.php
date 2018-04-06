@@ -25,7 +25,7 @@
 						<h4>Support</h4>
 					</div>
 					<div class="inactive_selection" data-type="inactive">
-						<a href="support.html">Help/FAQ</a>
+						<a href="supportcenter.php">Help/FAQ</a>
 					</div>
 					<div class="inactive_selection" data-type="inactive">
 							<a href="privacy.html">Privacy Policy</a>

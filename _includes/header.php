@@ -33,6 +33,7 @@
 			</div>
 			<div class="bottom container">
 				<div class="text_container left">
+					<a class="text_content view_filter">FILTER SEARCH</a>
 					<a class="text_content view_jobs">VIEW JOBS</a>
 					<a class="text_content view_companies">VIEW COMPANIES</a>
 					<a class="text_content sponsorship">BECOME A SPONSOR</a>

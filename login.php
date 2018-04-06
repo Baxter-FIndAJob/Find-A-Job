@@ -12,6 +12,9 @@
 				<button class="options signup active" id="signup_formOption" onclick="changeTab('signup_view');" >Sign up</button>
 				<button class="options login" id="login_formOption" onclick="changeTab('login_view');">Login</button>
 			</div>
+			<div class="error_container">
+
+			</div>
 			<form class="signup_container" id="signup_form" onsubmit="return validate('signup');" action="server/signup.php" method="POST">
 				<div class="form_container firstname_holder">
 					<b>FIRST NAME</b>
@@ -23,7 +26,7 @@
 				</div>
 				<div class="form_container email_holder">
 					<b>EMAIL</b>
-					<input id="signup_emailInput" name="signup_email" maxlength="255" type="text" />
+					<input class="error" id="signup_emailInput" name="signup_email" maxlength="255" type="text" />
 				</div>
 				<div class="form_container password_holder">
 					<b>PASSWORD</b>
@@ -35,9 +38,10 @@
 				</div>
 				<br>
 				<br>
-				<b>By pressing Sign up you agree to our Terms of Use and Privacy Policy.</b><br><br>
-				<button type="submit" name="register" class="button">Sign up</button><br><br>
+				<b>By creating an account, you agree to our Terms of Use, and have read our Privacy Policy.</b><br><br>
+				<button type="submit" name="register" class="button">Create Account<b>></b></button><br><br>
 			</form>
+
 			<form class="login_container" id="login_form" onsubmit="return validate('login');" hidden="true" action="server/login.php" method="POST">
 				<div class="form_container email_holder">
 					<b>EMAIL</b>
@@ -50,8 +54,9 @@
 				</div>
 				<br>
 				<br>
-				<button type="submit" name="login" class="button">Login</button>
+				<button type="submit" name="login" class="button">Login<b>></b></button>
 			</form>
+
 			<form class="resetPassword_container" id="reset_form" onsubmit="return validate('resetEmail');" hidden="true" action="server/forgotpassword.php" method="POST">
 				<div class="form_container resetPassword_holder">
 					<div class="form_container email_holder">
@@ -61,8 +66,8 @@
 				</div>
 				<br>
 				<br>
-				<b>Make sure the email is valid so you're able to receive the reset password message.</b><br><br>
-				<button type="submit" name="forgotpassword" class="button">Request Change</button>
+				<b>Make sure the email is valid so you can receive a new request key to change your password.</b><br><br>
+				<button type="submit" name="forgotpassword" class="button">Request Key<b>></b></button>
 			</form>
 		</div>
 	</div>

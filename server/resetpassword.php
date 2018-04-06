@@ -10,13 +10,16 @@
 		$sql = "SELECT * FROM users WHERE userEmail = '$email' AND userToken = '$token'";
 		$result = mysqli_query($db, $sql);
 		$resultCheck = mysqli_num_rows($result);
-
+		if($token == ""){
+			header("Location: ../resetpassword.php?update=failed%invalid&token");
+			exit();
+		}else{
 		if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
 			header("Location: ../resetpassword.php?update=failed%invalid%email&'$email'");
 			exit();
 		}else{
 		if(!$resultCheck){
-        	header("Location: ../resetpassword.php?password='$pwd'");
+        	header("Location: ../resetpassword.php?update=failed%invalid&information");
 			exit();
 		}else{
 			// hash the password
@@ -25,10 +28,13 @@
 			// update data
 			$db->query("UPDATE users SET userPassword = '$hashedpwd' WHERE userEmail = '$email'");
 
+			$db->query("UPDATE users SET userToken ='' WHERE userEmail = '$email'");
+
 			header("Location: ../login.php?update=password");
 			exit();
 			}
 		}
+	}
 	}else{
 		header("Location: ../resetpassword.php?");
 		exit();

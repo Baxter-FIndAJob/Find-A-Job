@@ -29,8 +29,9 @@
 		}else{
 			// hash the password
 			$hashedpwd = md5($pwd);
+
 			// insert the user into the database
-			$sqlnewUser = "INSERT INTO users (userEmail,userFirst,userLast,userPassword) VALUES ('$email','$first','$last','$hashedPwd');";
+			$sqlnewUser = "INSERT INTO users (userEmail,userFirst,userLast,userPassword) VALUES ('$email','$first','$last','$hashedpwd')";
 
 			mysqli_query($db, $sqlnewUser);
 				

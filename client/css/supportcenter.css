@@ -1,0 +1,49 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    background: #fbfbfb;
+    min-height: 100%;
+}
+
+/* PAGE HOLDER */
+.page_holder{    
+    width: 900px;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.page_holder .side_bar{
+    display: inline-block;
+    height: auto;
+    background: #fefefe;
+    border: 1px solid #b9bbbb;
+    border-radius: 5px;
+}
+
+.side_bar .options_container{
+	width: 250px;
+	height: 300px;
+	padding:  10px 5px;
+}
+
+.side_bar .options_container a.options{
+	display: block;
+	padding: 5px 10px;
+	margin: 2px 5px;
+	font-family: 'Roboto';
+	font-weight: 500;
+	font-size: 14px;
+	color: #555454;
+	cursor:pointer;
+	border-left: 3px solid #ddd9da;
+	border-bottom: 1px solid #dcd9da;}
+
+.side_bar .options_container a.help{
+	border-left: 0px;
+    text-align: center;
+    cursor: default;
+}
+
+.side_bar .options_container a.active{
+	background: #f5f5f5;
+}

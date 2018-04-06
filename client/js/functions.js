@@ -50,7 +50,6 @@ function createTag(dom, string, parent, type){
 	}	
 };
 
-
 /*
 function removeTag(tag){
 	var selectedTag = tag;
@@ -83,11 +82,11 @@ function removeTag(tag,type){
 
 
 
-// createTag("a","Portland, ME","searchLocationHolder", "location" )
-// createTag("a","Sandwich Artist","searchJobHolder", "job" )
+createTag("a","Portland, ME","searchLocationHolder", "location" )
+createTag("a","Sandwich Artist","searchJobHolder", "job" )
 
 
-// createTag("a",latestLocation,"recentSearchHolder", "search" )
-// createTag("a",latestJob,"recentSearchHolder", "search" )
+createTag("a",latestLocation,"recentSearchHolder", "search" )
+createTag("a",latestJob,"recentSearchHolder", "search" )
 
 
