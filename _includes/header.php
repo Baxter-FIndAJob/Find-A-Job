@@ -10,6 +10,12 @@
 
 
 		<script src="client/js/header.js?v=<?php echo time();?>" type="text/javascript"></script>
+
+
+		<!-- LOAD JQUERY FROM CDN -->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+
 	</head>
 	<body>
 		<!-- HEADER -->

@@ -82,6 +82,7 @@ var resetpwdbtn = document.getElementById("resetpwdbtn");
 		
 			var fields = ['firstName', 'lastName', 'email', 'password', 'confirmPassword'];
 			var req = checkForm(fields, 'signup');
+
 			if(!req) return false;
 
 
@@ -93,6 +94,11 @@ var resetpwdbtn = document.getElementById("resetpwdbtn");
 				document.getElementById("signup_confirmPasswordInput").style.background = normalBackground;
 			}
 
+			var successHandler = function(){
+				$('#error_container').html('');
+				$('#signup_form').hide();
+				$('#success_container').html("Welcome to JobQuery.org!");	
+			}
 
 		};
 
@@ -102,6 +108,10 @@ var resetpwdbtn = document.getElementById("resetpwdbtn");
 
 			var req = checkForm(['email', 'password'], 'login');
 			if(!req) return false;
+
+			var successHandler = function(){
+				window.location = "http://google.com";
+			}
 
 		};
 
@@ -116,7 +126,7 @@ var resetpwdbtn = document.getElementById("resetpwdbtn");
 		// VALIDATE RESET PASSWORD
 		if(type == "resetPassword"){
 	
-			var req = checkForm(, 'reset');
+			var req = checkForm(["code","email","newPassword","passwordConfirmation"], 'reset');
 			if(!req) return false;
 
 			if(req.password != req.retypePassword){
@@ -134,5 +144,59 @@ var resetpwdbtn = document.getElementById("resetpwdbtn");
 		var apiPayload = req;
 
 
+		console.log("This is what we want to send to the server:");
 
+		console.log(apiPayload);
+
+		console.log(action);
+
+
+		submitDataToServer(action, apiPayload, successHandler)
+
+		return false;
 	};
+
+
+	function submitDataToServer(action, apiPayload, successHandler){
+		var apiRequest = {
+			action : action,
+			request_payload: apiPayload
+		}
+
+		$.ajax({
+			url: '',
+			type: 'POST',
+			contentType:'application/json',
+			data: JSON.stringify(apiRequest),
+			dataType:'json',
+
+			success: function(data){
+				//On ajax success do this
+				console.log(data);
+
+				if(data.status == "Error"){
+					$('#error_container').html(data.message);
+				}
+
+				if(data.status == "Success!"){
+					successHandler(data);
+				}
+
+			},
+
+			error: function(xhr, ajaxOptions, thrownError) {
+				//On error do this
+				if (xhr.status == 200) {
+			    	alert(ajaxOptions);
+				}
+				else {
+			    	alert(xhr.status);
+			    	alert(thrownError);
+				}
+			}
+		});
+	}
+
+
+
+

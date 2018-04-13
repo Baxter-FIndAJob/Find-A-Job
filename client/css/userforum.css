@@ -142,5 +142,15 @@ html, body{
     outline: none;
 }
 
-/* LOGIN EDDITION */
+/* LOGIN EDITION */
+
+#error_container {
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    color: red;
+    margin: 10px 0;
+}
+
+
 

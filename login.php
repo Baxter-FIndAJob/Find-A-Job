@@ -14,7 +14,7 @@
 				<button class="options signup active" id="signup_formOption" onclick="changeTab('signup_view');" >Sign up</button>
 				<button class="options login" id="login_formOption" onclick="changeTab('login_view');">Login</button>
 			</div>
-			<div class="error_container">
+			<div id="error_container">
 
 			</div>
 			<form class="signup_container" id="signup_form" onsubmit="return validate('signup');" action="server/signup.php" method="POST">
@@ -71,6 +71,8 @@
 				<b>Make sure the email is valid so you can receive a new request key to change your password.</b><br><br>
 				<button type="submit" name="forgotpassword" class="button">Request Key<b>></b></button>
 			</form>
+
+			<div id="success_container"></div>
 		</div>
 	</div>
 
