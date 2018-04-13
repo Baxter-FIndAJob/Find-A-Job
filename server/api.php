@@ -144,10 +144,11 @@
 			}
 		break;
 
-
 		// LOGOUT
 		case "logout" :
-			unset($_SESSION['user']);
+			session_unset();
+			session_destroy();
+
 			$response['status'] = "Success!";
 		break;
 

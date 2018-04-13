@@ -4,6 +4,9 @@ var searchLocationHolder = document.getElementById("search-location-holder")
 var searchJobHolder = document.getElementById("search-job-holder")
 var latestLocation;
 var latestJob;
+var recentMax = 6;
+var recentAmt = 0;
+var filterOpen = false;
 
 function toggleLevel(el){
 	var lvl1 = document.getElementById("lvl1");
@@ -29,12 +32,18 @@ function createTag(dom, string, parent, type){
 			return
 		};
 	var newElement = document.createElement(dom);
-		newElement.className = type + " " + string;
-		newElement.textContent = string;
+			newElement.className = type + " " + string;
+			newElement.textContent = string;
 
 
 	if(tagParent == "recentSearchHolder"){
+
+		// var newX = document.createElement(string);
+		// 	newX.className = "remove_search";
+		// 	newX.textContent = "X";
+
 		recentSearchHolder.insertBefore(newElement,recentSearchHolder.firstChild);
+		recentAmt = recentAmt + 1;
 	}else{	
 	if(tagParent == "searchLocationHolder"){
 		newElement.setAttribute("onclick","removeTag(this," + '"' + type + '"'+")");
@@ -80,13 +89,24 @@ function removeTag(tag,type){
 	};
 };
 
+function filtertoggle(){
+	var topbarHolder = document.getElementById("topbar-holder")
+	if(filterOpen == false){
+		topbarHolder.classList.remove("hidden");
+		filterOpen = true;
+	}else{
+		topbarHolder.classList.add("hidden");
+		filterOpen = false
+	}
+}
 
 
-createTag("a","Portland, ME","searchLocationHolder", "location" )
-createTag("a","Sandwich Artist","searchJobHolder", "job" )
+
+// createTag("a","Portland, ME","searchLocationHolder", "location" )
+// createTag("a","Sandwich Artist","searchJobHolder", "job" )
 
 
-createTag("a",latestLocation,"recentSearchHolder", "search" )
-createTag("a",latestJob,"recentSearchHolder", "search" )
+createTag("a","Portland, ME","recentSearchHolder", "search" )
+createTag("a","Sandwich Artist","recentSearchHolder", "search" )
 
 

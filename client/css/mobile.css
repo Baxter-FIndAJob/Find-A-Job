@@ -1,3 +1,6 @@
-body {
-	background: blue;
+html, body{
+    margin: 0;
+    padding: 0;
+    background: #fbfbfb;
+    min-height: 100%;
 }
