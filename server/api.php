@@ -202,7 +202,7 @@
 
 		// DEFAULT
 		default :
-			$returnError("Action not found.");
+			returnError("Action not found.");
 		break;
 
 	}

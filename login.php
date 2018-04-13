@@ -5,6 +5,8 @@
 	require("_includes/header.php");
 ?>
 	<body>
+
+
 	<link href="client/css/userforum.css?v=<?php echo time();?>" type="text/css" rel="stylesheet">
 	<div id="page_holder" class="page_holder">
 		<div class="form_holder" method="post">
@@ -34,7 +36,7 @@
 				</div>
 				<div class="form_container passwordconfirmation_holder">
 					<b>CONFIRM PASSWORD</b>
-					<input id="signup_confirmPassword" maxlength="255" type="password" />
+					<input id="signup_confirmPasswordInput" maxlength="255" type="password" />
 				</div>
 				<br>
 				<br>

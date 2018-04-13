@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Flex Example</title>
+
+		<style>
+			
+			body,html {
+				background: black;
+
+			}
+
+			.jobListing {
+				background: white;
+				width: 400px;
+				margin:100px auto;
+			}
+
+
+			.jobListingBuffer {
+				padding: 10px;
+				display: flex;
+				flex-direction: row;
+			}
+
+
+			/* COLUMN 1 */
+			.imgFrame {
+
+			}
+			.employerIcon {
+				height: 50px;
+				width: 50px;
+				background: red;
+			}
+
+			/* COLUMN 2 */
+			.descriptionFrame {
+				flex-grow: 1;
+				padding: 3px 10px;
+			}
+
+			.jobTitle {
+				font-weight: bold;
+			}
+
+
+			/* COLUMN 3 */
+			.arrowFrame {
+				display: flex;
+				align-items: center;
+			}
+
+		</style>
+
+	</head>
+	<body>
+		<div class="jobListing">
+
+			<div class="jobListingBuffer">
+			
+				<!-- COL 1-->
+				<div class="imgFrame">
+					<div class="employerIcon"></div>
+				</div>
+
+				<!-- COL 2 -->
+				<div class="descriptionFrame">
+					<div class="jobTitle">McDonald's</div>
+					<div class="description">Home of the original hamburger.</div>
+				</div>
+
+				
+				<!-- COL 3 -->
+				<div class="arrowFrame">
+					>
+				</div>
+			
+			</div>
+
+		</div>
+	</body>
+</html>
