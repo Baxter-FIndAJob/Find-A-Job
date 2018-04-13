@@ -70,6 +70,7 @@
     color: #555454;
     border: 2px solid #ffffff00;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .header .bottom div.left input.search_content{
@@ -112,6 +113,7 @@
     color: #555454;
     border: 2px solid #ffffff00;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .header .bottom div.right a.language{
@@ -122,4 +124,14 @@
     width: 15px;
     position: relative;
     top: 3px;
+}
+
+/* TOP BAR */
+.topbar-holder{
+    width: 100%;
+    height: 200px;
+    background: #fefefe;
+    border-bottom: 1px solid #ded9d9;
+    position: fixed;
+    margin-top: 70px;
 }

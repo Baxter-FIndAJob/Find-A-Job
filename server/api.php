@@ -144,6 +144,15 @@
 			}
 		break;
 
+		case "logout" :
+			if(isset($_POST['logout'])) returnError("Logout request invalid.")
+				include('jobquery_db.php');
+
+				session_start();
+				session_unset();
+				session_destroy();
+		break;
+
 		default :
 			$returnError("Action not found.");
 		break;

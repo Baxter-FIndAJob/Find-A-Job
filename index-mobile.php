@@ -1,6 +1,6 @@
 <?php
 	// start the web page
-	require('_includes/header.php');
+	require('_includes/mobileHeader.php');
 
 ?>
 <body>

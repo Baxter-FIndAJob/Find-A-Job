@@ -1,7 +1,3 @@
-<?php
-	session_start();
-?>
-
 <!DOCTYPE html>
 	<head>
 		<html lang="eng">
@@ -17,11 +13,12 @@
 		<div class="header">
 			<div class="top container">
 				<?php
+				
 					if(isset($_SESSION['u_Id'])){
 						echo '<div class="text_container right">
-							<form action="server/logout.php" method="POST">
-								<button type="submit" class="text_content logout" name="logout">LOGOUT</button>
-							</form>
+								<form action="server/logout.php" method="POST">
+									<button type="submit" class="text_content logout" name="logout">LOGOUT</button>
+								</form>
 							</div>';
 					}else{
 						echo '<div class="text_container right">
@@ -33,8 +30,8 @@
 			</div>
 			<div class="bottom container">
 				<div class="text_container left">
-					<a class="text_content view_filter">FILTER SEARCH</a>
-					<a class="text_content view_jobs">VIEW JOBS</a>
+					<a class="text_content view_filter" onclick="filtertoggle(this);">FILTER SEARCH</a> 
+					<a class="text_content view_jobs" href="index.php">VIEW JOBS</a>
 					<a class="text_content view_companies">VIEW COMPANIES</a>
 					<a class="text_content sponsorship">BECOME A SPONSOR</a>
 					<a class="text_content work_permit">WORK PERMIT</a>
@@ -44,8 +41,14 @@
 				<div class="text_container right">
 					<a class="text_content blog">BLOG</a>
 					<a class="text_content about">ABOUT</a>
-					<a class="text_content faq">FAQ</a>
+					<a class="text_content faq" href="supportcenter.php">FAQ</a>
 					<a class="text_content language">EN</a><img src="client/images/icons/globe_img.png" class="language_globe">
 				</div>				
 			</div>
+		</div>
+		
+		<!-- TOPBAR HOLDER -->
+		<div class="topbar-holder" hidden="true">
+			
+
 		</div>
