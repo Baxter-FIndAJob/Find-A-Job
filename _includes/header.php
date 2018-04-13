@@ -46,9 +46,11 @@
 				</div>				
 			</div>
 		</div>
-		
+
 		<!-- TOPBAR HOLDER -->
 		<div class="topbar-holder" hidden="true">
 			
 
 		</div>
+
+		<script src="client/js/header.js?v=<?php echo time();?>" type="text/javascript"></script>
