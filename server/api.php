@@ -144,15 +144,63 @@
 			}
 		break;
 
+		// LOGOUT
 		case "logout" :
-			if(isset($_POST['logout'])) returnError("Logout request invalid.")
-				include('jobquery_db.php');
+			session_unset();
+			session_destroy();
 
-				session_start();
-				session_unset();
-				session_destroy();
+			$response['status'] = "Success!";
 		break;
 
+
+		// SEND EMAIL
+		case "send_email" :
+			
+			// get the email
+			if(!isset($req['email'])) returnError("No email provided.");
+			$email = mysqli_real_escape_string($req['email']);
+			if(!filter_var($email, FILTER_VALIDATE_EMAIL)) returnError("Email not valid.");
+
+
+			// get the user
+			$sql = "SELECT * FROM users WHERE userEmail = '$email'";
+			$result = mysqli_query($db, $sql);
+			$resultCheck = mysqli_num_rows($result);
+			if(!$resultCheck){
+	       		returnError("User not found.");
+			}
+
+
+			// pick a token
+			$str = "0123456789!#%&AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
+			$strShuffle = str_shuffle($str);
+			$newToken = substr($strShuffle, 0, 10);
+			
+
+			// update the user
+			$db->query("UPDATE users SET userToken ='$newToken' WHERE userEmail = '$email'");
+
+
+			// generate the reset URL
+			$url = SITE_URL . "/resetpassword.php?t=" . $newToken; 
+
+
+			$url = "/'$newToken'";
+
+			//email($mail,"Reset Password","To reset your password, click here or visit:'$url'")
+
+			
+
+			mail($email,'Password Request Key', 'The following email has requested for a password change request key. Your key is: "$newToken",urmom@gmail.com');
+
+
+
+
+
+		break;
+
+
+		// DEFAULT
 		default :
 			$returnError("Action not found.");
 		break;
