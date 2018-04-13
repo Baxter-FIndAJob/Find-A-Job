@@ -1,3 +1,51 @@
-body {
-	background: blue;
+body, html{
+	margin: 0;
+	padding: 0;
+	background: white;
+}
+
+.title {
+	font-family: Arial;
+	text-align: center;
+	background: #0071bc;
+	color: white;
+	margin: 0;
+	padding: 0;
+	padding-top: 15px;
+	font-size: 20px;
+	padding-bottom: 15px;
+}
+
+.breadcrumb_menu {
+	border-bottom: solid 2px #bcdbed;
+	padding: 5px;
+}
+
+.breadcrumb_menu .img {
+	height: 10px;
+	width: 10px;
+	padding-top: 30px;
+}
+
+.breadcrumb_menu .text {
+	font-family: Arial;
+	text-align: left;
+	padding-left: 10px;
+	color: #0071bc;
+	padding-bottom: 10px;
+}
+
+.JOBtitles {
+	font-family: Arial;
+	text-align: left;
+	padding-left: 10px;
+	color: black;
+	padding-bottom: 10px;
+}
+.job {
+	border-bottom: solid 2px #bcdbed;
+}
+.Description {
+	text-align: left;
+	color: #808080;
 }
