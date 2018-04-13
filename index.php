@@ -93,7 +93,7 @@
 								<div class="column employer">
 									<b class="text_container">Employer</b>
 									<div class="column_container">									
-										<a class="employer_name" href="employer.php?e=' . $sj -> employerId . '">' . $j -> employerName . '</a><br />
+										<a class="employer_name" href="employer.php?e=' . $j -> employerId . '">' . $j -> employerName . '</a><br />
 									</div>
 								</div>
 								<div class="column location">
