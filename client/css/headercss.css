@@ -127,11 +127,14 @@
 }
 
 /* TOP BAR */
-.topbar-holder{
+#topbar-holder{
     width: 100%;
-    height: 200px;
+    height: 30px;
     background: #fefefe;
     border-bottom: 1px solid #ded9d9;
     position: fixed;
-    margin-top: 70px;
+    margin-top: 90px;
+}
+#topbar-holder.hidden{
+    display: none;
 }

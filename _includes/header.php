@@ -7,6 +7,9 @@
 		<link rel="icon" type="/img/png" href="client/images/icons/search_img.png">
 		<link href="client/css/headercss.css?v=<?php echo time();?>" type="text/css" rel="stylesheet">
 		<link href="client/css/footercss.css?v=<?php echo time();?>" type="text/css" rel="stylesheet">
+
+
+		<script src="client/js/header.js?v=<?php echo time();?>" type="text/javascript"></script>
 	</head>
 	<body>
 		<!-- HEADER -->
@@ -48,9 +51,9 @@
 		</div>
 
 		<!-- TOPBAR HOLDER -->
-		<div class="topbar-holder" hidden="true">
-			
+		<div id="topbar-holder" class="hidden">
+			THIS IS THE TOP BAR
 
 		</div>
 
-		<script src="client/js/header.js?v=<?php echo time();?>" type="text/javascript"></script>
+		

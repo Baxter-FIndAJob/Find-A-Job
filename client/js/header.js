@@ -1,8 +1,13 @@
-var topbarHolder = document.getElementById("topbar-holder")
+
+
 var filterOpen = false
 
+
 function filtertoggle(){
-	if(filtertoggle == false){
+
+	var topbarHolder = document.getElementById("topbar-holder");
+
+	if(filterOpen == false){
 		topbarHolder.classList.remove("hidden");
 		filterOpen = true;
 	}else{
