@@ -13,8 +13,13 @@
 	}
 
 
+
+
 	// READ INPUT
 	$req = json_decode(file_get_contents('php://input'), true);
+
+
+
 	if($req){
 
 
@@ -151,9 +156,12 @@
 			case "send_email" :
 				
 				// get the email
-				if(!isset($req['email'])) returnError("No email provided.");
-				$email = mysqli_real_escape_string($req['email']);
+				if(!isset($payload['email'])) returnError("No email provided.");
+				$email = mysqli_real_escape_string($db, $payload['email']);
 				if(!filter_var($email, FILTER_VALIDATE_EMAIL)) returnError("Email not valid.");
+
+
+				echo "The email to look up is: " . $email;
 
 
 				// get the user
@@ -164,6 +172,8 @@
 		       		returnError("User not found.");
 				}
 
+
+				print_r($result);
 
 				// pick a token
 				$str = "0123456789!#%&AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
@@ -176,16 +186,13 @@
 
 
 				// generate the reset URL
+				define( "SITE_URL", "http://localhost/cmty/_baxter/_2017-2018/app-challenge/findajob/repo");
 				$url = SITE_URL . "/resetpassword.php?t=" . $newToken; 
-
-
-				$url = "/'$newToken'";
-
-				//email($mail,"Reset Password","To reset your password, click here or visit:'$url'")
-
+ 				
 				
+				echo "\n\n\nSend the url: " . $url . " to " . $email;
 
-				mail($email,'Password Request Key', 'The following email has requested for a password change request key. Your key is: "$newToken",urmom@gmail.com');
+				mail($email,'Password Request Key', 'Click here: ' . $url . ' to reset your password.');
 
 
 
