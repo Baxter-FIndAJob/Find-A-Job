@@ -53,12 +53,12 @@
 
 				// Check first and last name for invalid characters.
 				if(!preg_match("/^[a-zA-Z ]*$/", $firstName) || !preg_match("/^[a-zA-Z ]*$/", $lastName)){
-					returnError("Illegal characters in first or last name");
+					returnError("ERROR: Illegal characters in first or last name");
 				}
 
 				// Check that email is valid.
 				if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-					returnError("Please provide a valid email.");
+					returnError("ERROR: Please provide a valid email");
 				}
 
 				// Check that email is not already in the system.
@@ -66,7 +66,7 @@
 				$result = mysqli_query($db, $sql);
 				$resultCheck = mysqli_num_rows($result);
 				if($resultCheck){
-					returnError("That email is already taken.");
+					returnError("ERROR: That email is already taken");
 				}
 
 
@@ -127,7 +127,7 @@
 
 				if($user = mysqli_fetch_assoc($result)){
 
-					if($user['userPassword'] != $hashedpwd) returnError("Incorrect password.");
+					if($user['userPassword'] != $hashedpwd) returnError("ERROR: Incorrect password");
 
 					$_SESSION['user'] = $user;
 					$response = array(

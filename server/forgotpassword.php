@@ -18,7 +18,7 @@
        		header("Location: ../resetpassword.php?reset=failed%invalid%information");
 			exit();
 		}else{
-			$str = "0123456789!#%&AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
+			$str = "0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
 			$strShuffle = str_shuffle($str);
 			$newToken = substr($strShuffle, 0, 10);
 			$url = "/'$newToken'";

@@ -146,10 +146,11 @@ html, body{
 
 #error_container {
     text-align: center;
-    font-weight: bold;
-    font-style: italic;
-    color: red;
-    margin: 10px 0;
+    font-weight: 600;
+    margin: 6px 0;
+    font-family: 'Roboto';
+    font-size: 13px;
+    color: #bc0000;
 }
 
 
