@@ -81,12 +81,12 @@ var resetpwdbtn = document.getElementById("resetpwdbtn");
 		if(type == "signup"){
 		
 			var fields = ['firstName', 'lastName', 'email', 'password', 'confirmPassword'];
-			var req = checkForm(fields, 'signup');
+			var request = checkForm(fields, 'signup');
 
-			if(!req) return false;
+			if(!request) return false;
 
 
-			if(req.password  != req.confirmPassword) {
+			if(request.password  != request.confirmPassword) {
 				document.getElementById("signup_confirmPasswordInput").style.background = errorBackground;
 				return false;
 			}
@@ -106,11 +106,12 @@ var resetpwdbtn = document.getElementById("resetpwdbtn");
 		// VALIDATE LOGIN
 		if(type == "login"){
 
-			var req = checkForm(['email', 'password'], 'login');
-			if(!req) return false;
+			var request = checkForm(['email', 'password'], 'login');
+			if(!request) return false;
 
-			var successHandler = function(){
-				return true;
+			var successHandler = function(response){
+				alert('I came back!');
+				console.log(response);
 			}
 
 		};
@@ -118,18 +119,18 @@ var resetpwdbtn = document.getElementById("resetpwdbtn");
 
 		// VALIDATE RESET EMAIL
 		if(type == "resetEmail"){
-			var req = checkForm(['newPassword', 'passwordConfirmation'], 'reset');
-			if(!req) return false;
+			var request = checkForm(['newPassword', 'passwordConfirmation'], 'reset');
+			if(!request) return false;
 		};
 
 
 		// VALIDATE RESET PASSWORD
 		if(type == "resetPassword"){
 	
-			var req = checkForm(["code","email","newPassword","passwordConfirmation"], 'reset');
-			if(!req) return false;
+			var request = checkForm(["code","email","newPassword","passwordConfirmation"], 'reset');
+			if(!request) return false;
 
-			if(req.password != req.retypePassword){
+			if(request.password != request.retypePassword){
 				document.getElementById("reset_passwordConfirmationInput").style.background = errorBackground;
 				return false;
 			}else{
@@ -141,17 +142,16 @@ var resetpwdbtn = document.getElementById("resetpwdbtn");
 		// ALL GOOD!!!
 
 		var action = type;
-		var apiPayload = req;
 
 
 		console.log("This is what we want to send to the server:");
 
-		console.log(apiPayload);
+		console.log(request);
 
 		console.log(action);
 
 
-		submitDataToServer(action, apiPayload, successHandler)
+		submitDataToServer(action, request, successHandler)
 
 		return false;
 	};

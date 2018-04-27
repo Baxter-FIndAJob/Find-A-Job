@@ -1,5 +1,7 @@
 <?php
 
+	if(!$db) exit("Database is not defined. This file is not for direct access.");
+
 
 	// Define "error handler"
 	function returnError($message){
@@ -35,7 +37,6 @@
 		$response = array();
 
 
-
 		switch($action){
 
 
@@ -63,6 +64,7 @@
 
 				// Check that email is valid.
 				if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+					echo $email . "\n\n";
 					returnError("ERROR: Please provide a valid email");
 				}
 

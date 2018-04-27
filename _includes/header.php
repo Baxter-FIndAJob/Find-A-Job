@@ -23,7 +23,7 @@
 			<div class="top container">
 				<?php
 				
-					if(isset($_SESSION['u_Id'])){
+					if($user){
 						echo '<div class="text_container right">
 								<form action="server/logout.php" method="POST">
 									<button type="submit" class="text_content logout" name="logout">LOGOUT</button>
