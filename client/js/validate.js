@@ -110,7 +110,7 @@ var resetpwdbtn = document.getElementById("resetpwdbtn");
 			if(!req) return false;
 
 			var successHandler = function(){
-				alert("you're now logged in");
+				return true;
 			}
 
 		};
