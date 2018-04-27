@@ -28,18 +28,20 @@
 	}
 
 
-
-
 	// Check the user's login status...
 	global $user;
 	session_start();
 	
-	echo "Session is\n";
-	print_r($_SESSION);
+	// echo "Session is\n";
+	// print_r($_SESSION);
 	
 	$user = false;
 	if(isset($_SESSION['user'])) $user = $_SESSION['user'];
 
+
+
+	// CHECK IF THERE'S AN API REQUEST
+	include('api.php');
 
 
 

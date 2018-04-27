@@ -5,6 +5,8 @@
 	require("_includes/header.php");
 ?>
 	<body>
+
+
 	<link href="client/css/userforum.css?v=<?php echo time();?>" type="text/css" rel="stylesheet">
 	<div id="page_holder" class="page_holder">
 		<div class="form_holder" method="post">
@@ -12,7 +14,7 @@
 				<button class="options signup active" id="signup_formOption" onclick="changeTab('signup_view');" >Sign up</button>
 				<button class="options login" id="login_formOption" onclick="changeTab('login_view');">Login</button>
 			</div>
-			<div class="error_container">
+			<div id="error_container">
 
 			</div>
 			<form class="signup_container" id="signup_form" onsubmit="return validate('signup');" action="server/signup.php" method="POST">
@@ -34,7 +36,7 @@
 				</div>
 				<div class="form_container passwordconfirmation_holder">
 					<b>CONFIRM PASSWORD</b>
-					<input id="signup_confirmPassword" maxlength="255" type="password" />
+					<input id="signup_confirmPasswordInput" maxlength="255" type="password" />
 				</div>
 				<br>
 				<br>
@@ -69,6 +71,8 @@
 				<b>Make sure the email is valid so you can receive a new request key to change your password.</b><br><br>
 				<button type="submit" name="forgotpassword" class="button">Request Key<b>></b></button>
 			</form>
+
+			<div id="success_container"></div>
 		</div>
 	</div>
 

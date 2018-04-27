@@ -38,114 +38,165 @@ var resetpwdbtn = document.getElementById("resetpwdbtn");
 		};
 	};
 
-	function validate(type){
-		if(type == "signup"){
 
-			var firstName = document.getElementById("signup_firstNameInput");
-			var lastName = document.getElementById("signup_lastNameInput");
-			var email = document.getElementById("signup_emailInput");
-			var password = document.getElementById("signup_passwordInput");
-			var retypePassword = document.getElementById("signup_confirmPassword");
-
-			if(firstName.value == ""){
-			firstName.style.background = errorBackground;
+	function checkField(fieldId){
+		var fieldNode = document.getElementById(fieldId);
+		
+		if(fieldNode.value == ""){
+			fieldNode.style.background = errorBackground;
 			return false;
-			}else{
-				firstName.style.background = normalBackground;
-			};
-
-			if(lastName.value == ""){
-				lastName.style.background = errorBackground;
-				return false;
-			}else{
-				lastName.style.background = normalBackground;
-			};
-
-			if(email.value == ""){
-				email.style.background = errorBackground;
-				return false;
-			}else{
-				email.style.background = normalBackground;
-			};
-
-			if(password.value == ""){
-				password.style.background = errorBackground;
-				return false;
-			}else{
-				password.style.background = normalBackground;
-			};
-
-			if(retypePassword.value == ""){
-				retypePassword.style.background = errorBackground;
-				return false;
-			}else{
-				retypePassword.style.background = normalBackground;
-			};
-
-			if(retypePassword.value != password.value){
-				retypePassword.style.background = errorBackground;
-				return false;
-			}else{
-				retypePassword.style.background = normalBackground;
-			};
+		}else{
+			fieldNode.style.background = normalBackground;
+			return fieldNode.value;
 		};
+	}
+
+
+	function checkForm(fields, formName){
+		var goAhead = true;
+		var req = {};
+
+		for(var i=0; i < fields.length; i++){
+			var fieldName = fields[i];
+
+			var fieldValue = checkField(formName + '_' + fieldName + 'Input');
+			
+			req[fieldName] = fieldValue;
+			
+			if(!fieldValue) goAhead = false;
+		}
+
+
+		return (goAhead) ? req : false;
+	}
+
+
+
+
+	function validate(type){
+
+
+
+		// VALIDATE SIGNUP FORM
+		if(type == "signup"){
+		
+			var fields = ['firstName', 'lastName', 'email', 'password', 'confirmPassword'];
+			var req = checkForm(fields, 'signup');
+
+			if(!req) return false;
+
+
+			if(req.password  != req.confirmPassword) {
+				document.getElementById("signup_confirmPasswordInput").style.background = errorBackground;
+				return false;
+			}
+			else {
+				document.getElementById("signup_confirmPasswordInput").style.background = normalBackground;
+			}
+
+			var successHandler = function(){
+				$('#error_container').html('');
+				$('#signup_form').hide();
+				$('#success_container').html("Welcome to JobQuery.org!");	
+			}
+
+		};
+
+
+		// VALIDATE LOGIN
 		if(type == "login"){
 
-			var email = document.getElementById("login_emailInput");
-			var password = document.getElementById("login_passwordInput");
+			var req = checkForm(['email', 'password'], 'login');
+			if(!req) return false;
 
-			if(email.value == ""){
-				email.style.background = errorBackground;
-				return false;
-			}else{
-				email.style.background = normalBackground;
-			};
-			if(password.value == ""){
-				password.style.background = errorBackground;
-				return false;
-			}else{
-				password.style.background = normalBackground;
-			};
+			var successHandler = function(){
+				alert("you're now logged in");
+			}
+
 		};
+
+
+		// VALIDATE RESET EMAIL
 		if(type == "resetEmail"){
-			var email = document.getElementById("reset_emailInput");
-
-			if(email.value == ""){
-				email.style.background = errorBackground;
-				return false;
-			};
+			var req = checkForm(['newPassword', 'passwordConfirmation'], 'reset');
+			if(!req) return false;
 		};
+
+
+		// VALIDATE RESET PASSWORD
 		if(type == "resetPassword"){
-			var code = document.getElementById("reset_codeInput");
-			var password = document.getElementById("reset_newPasswordInput");
-			var retypePassword = document.getElementById("reset_passwordConfirmationInput");
+	
+			var req = checkForm(["code","email","newPassword","passwordConfirmation"], 'reset');
+			if(!req) return false;
 
-			if(code.value == ""){
-				code.style.background = errorBackground;
+			if(req.password != req.retypePassword){
+				document.getElementById("reset_passwordConfirmationInput").style.background = errorBackground;
 				return false;
 			}else{
-				code.style.background = normalBackground;
-			};
-
-			if(password.value == ""){
-				password.style.background = errorBackground;
-				return false;
-			}else{
-				password.style.background = normalBackground;
-			};
-
-			if(retypePassword.value == ""){
-				retypePassword.style.background = errorBackground;
-				return false;
-			}else{
-				retypePassword.style.background = normalBackground;
-			};
-
-			if(retypePassword.value != password.value){
-				retypePassword.style.background = errorBackground;
-				return false;
-			}else{
-				retypePassword.style.background = normalBackground;
+				document.getElementById("reset_passwordConfirmationInput").style.background = normalBackground;
 			};
 		};
+
+
+		// ALL GOOD!!!
+
+		var action = type;
+		var apiPayload = req;
+
+
+		console.log("This is what we want to send to the server:");
+
+		console.log(apiPayload);
+
+		console.log(action);
+
+
+		submitDataToServer(action, apiPayload, successHandler)
+
+		return false;
 	};
+
+
+	function submitDataToServer(action, apiPayload, successHandler){
+		var apiRequest = {
+			action : action,
+			request_payload: apiPayload
+		};
+
+		$.ajax({
+			url: '',
+			type: 'POST',
+			contentType:'application/json',
+			data: JSON.stringify(apiRequest),
+			dataType:'json',
+
+			success: function(data){
+				//On ajax success do this
+				console.log(data);
+
+				if(data.status == "Error"){
+					$('#error_container').html(data.message);
+				}
+
+				if(data.status == "Success!"){
+					successHandler(data);
+				}
+
+			},
+
+			error: function(xhr, ajaxOptions, thrownError) {
+				//On error do this
+				if (xhr.status == 200) {
+			    	alert(ajaxOptions);
+				}
+				else {
+			    	alert(xhr.status);
+			    	alert(thrownError);
+				}
+			}
+		});
+	}
+
+
+
+

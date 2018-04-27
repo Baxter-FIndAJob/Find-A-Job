@@ -5,6 +5,16 @@ html, body{
     min-height: 100%;
 }
 
+/* TOP BAR */
+.topbar-holder{
+    width: 100%;
+    height: 200px;
+    background: #fefefe;
+    border-bottom: 1px solid #ded9d9;
+    position: fixed;
+    margin-top: 70px;
+}
+
 /* SIDE BAR */
 .sidebar_holder{
     width: 230px;
@@ -28,26 +38,6 @@ html, body{
     text-align: center;
     margin: 0;
     padding: 0;
-    user-select: none;
-}
-
-.sidebar_holder .recent_searches ul{
-    margin: 0px;
-    margin-bottom: 15px;
-    padding: 0px;
-}
-
-.sidebar_holder .recent_searches ul a{
-    font-family: 'Roboto';
-    font-weight: 500;
-    font-size: 12px;
-    background: #555454;
-    margin: 3px 2px;
-    padding: 4px 6px;
-    color: #ffffff;
-    border-radius: 5px;
-    cursor: pointer;
-    display: inline-block;
     user-select: none;
 }
 
@@ -203,7 +193,6 @@ html, body{
 .page_holder{    
     width: 700px;
     margin: auto;
-    padding-left: 300px;
     padding-top: 100px;
 }
 
@@ -220,11 +209,50 @@ html, body{
     margin-left: 0px;
 }
 
+.page_holder .recent_searches{
+    padding: 6px 10px;
+    margin-top: 3px;
+    border-radius: 5px;
+}
+
+.page_holder .recent_searches b.title{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 14px;
+    color: #5a5a5a;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+.page_holder .recent_searches ul{
+    margin: 0px;
+    margin-bottom: 5px;
+    padding: 0px;
+}
+
+.page_holder .recent_searches ul a{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 12px;
+    background: #ededed;
+    margin: 3px 2px;
+    padding: 4px 6px;
+    color: #555454;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;
+}
+
 /* PAGE HOLDER */
 .page_holder{    
     width: 700px;
     margin: auto;
-    padding-left: 300px;
+    padding-left: 0px;
     padding-top: 100px;
 }
 
@@ -502,7 +530,29 @@ html, body{
     margin: 0px 5px;
 }
 
-.job_holder b.arrow{
+.job_holder a.arrow{
+    float: right;
+    margin-top: 15px;
+    margin-right: 10px;
+    padding: 3px;
+    background: #555454;
+    border-radius: 50px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Roboto';
+    color: #fefefe;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+} 
+
+.job_holder a.s_arrow{
+    background: #0071bc;
+}
+
+.employer_holder a.s_arrow{
     float: right;
     margin-top: 15px;
     margin-right: 10px;
@@ -516,5 +566,6 @@ html, body{
     font-family: 'Roboto';
     color: #fefefe;
     cursor: pointer;
-} 
-
+    outline: none;
+    text-decoration: none;
+}
