@@ -148,9 +148,10 @@ html, body{
     text-align: center;
     font-weight: 600;
     margin: 6px 0;
+    padding: 3px 0px;
     font-family: 'Roboto';
     font-size: 13px;
-    color: #bc0000;
+    color: #ff656f;
 }
 
 

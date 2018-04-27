@@ -110,7 +110,7 @@ var resetpwdbtn = document.getElementById("resetpwdbtn");
 			if(!req) return false;
 
 			var successHandler = function(){
-				window.location = "http://google.com";
+				alert("you're now logged in");
 			}
 
 		};
@@ -161,7 +161,7 @@ var resetpwdbtn = document.getElementById("resetpwdbtn");
 		var apiRequest = {
 			action : action,
 			request_payload: apiPayload
-		}
+		};
 
 		$.ajax({
 			url: '',

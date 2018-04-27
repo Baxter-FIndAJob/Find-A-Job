@@ -117,7 +117,7 @@
 				$hashedpwd = md5($password);
 
 				if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-					returnError("Invalid email.");
+					returnError("ERROR: Invalid email.");
 				}
 
 

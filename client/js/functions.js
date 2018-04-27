@@ -38,13 +38,12 @@ function createTag(dom, string, parent, type){
 
 	if(tagParent == "recentSearchHolder"){
 
-		// var newX = document.createElement(string);
+		// var newX = document.createElement(newElement);
 		// 	newX.className = "remove_search";
 		// 	newX.textContent = "X";
-
 		recentSearchHolder.insertBefore(newElement,recentSearchHolder.firstChild);
 		recentAmt = recentAmt + 1;
-	}else{	
+	}else{
 	if(tagParent == "searchLocationHolder"){
 		newElement.setAttribute("onclick","removeTag(this," + '"' + type + '"'+")");
 		searchLocationHolder.appendChild(newElement);
