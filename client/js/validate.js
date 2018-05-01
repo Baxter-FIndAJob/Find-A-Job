@@ -11,7 +11,8 @@ var signupbtn = document.getElementById("signup_formOption");
 var loginbtn = document.getElementById("login_formOption");
 	loginform = document.getElementById("login_form");
 var resetpwdbtn = document.getElementById("resetpwdbtn");
-	var resetform = document.getElementById("reset_form");
+
+	var resetform = document.getElementById("requestResetEmail_form");
 
 // Function
 	function changeTab(type){
@@ -110,16 +111,16 @@ var resetpwdbtn = document.getElementById("resetpwdbtn");
 			if(!request) return false;
 
 			var successHandler = function(response){
-				alert('I came back!');
-				console.log(response);
+				
+				window.location = "index-desktop.php";
 			}
 
 		};
 
 
 		// VALIDATE RESET EMAIL
-		if(type == "resetEmail"){
-			var request = checkForm(['newPassword', 'passwordConfirmation'], 'reset');
+		if(type == "requestResetEmail"){
+			var request = checkForm(['email'], 'requestResetEmail');
 			if(!request) return false;
 		};
 

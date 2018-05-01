@@ -17,6 +17,9 @@
 			<div id="error_container">
 
 			</div>
+
+
+			<!-- SIGN UP FORM -->
 			<form class="signup_container" id="signup_form" onsubmit="return validate('signup');" action="server/signup.php" method="POST">
 				<div class="form_container firstname_holder">
 					<b>FIRST NAME</b>
@@ -44,6 +47,8 @@
 				<button type="submit" name="register" class="button">Create Account<b>></b></button><br><br>
 			</form>
 
+
+			<!-- LOGIN FORM -->
 			<form class="login_container" id="login_form" onsubmit="return validate('login');" hidden="true" action="server/login.php" method="POST">
 				<div class="form_container email_holder">
 					<b>EMAIL</b>
@@ -59,11 +64,15 @@
 				<button type="submit" name="login" class="button">Login<b>></b></button>
 			</form>
 
-			<form class="resetPassword_container" id="reset_form" onsubmit="return validate('resetEmail');" hidden="true" action="server/forgotpassword.php" method="POST">
+
+			<!-- RESQUEST PASSWORD RESET -->
+			<form class="requestResetEmail_container" id="requestResetEmail_form" 
+					onsubmit="return validate('requestResetEmail');" hidden="true">
+					
 				<div class="form_container resetPassword_holder">
 					<div class="form_container email_holder">
 						<b>EMAIL</b>
-						<input id="reset_emailInput" name="reset_email" maxlength="255" type="text" placeholder="example@gmail.com" />
+						<input id="requestResetEmail_emailInput" name="requestResetEmail_email" maxlength="255" type="text" placeholder="example@gmail.com" />
 					</div>
 				</div>
 				<br>

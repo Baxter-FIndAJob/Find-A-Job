@@ -22,6 +22,8 @@
 
 
 
+
+
 	if($req){
 
 
@@ -155,15 +157,13 @@
 
 
 			// SEND EMAIL
-			case "send_email" :
+			case "requestResetEmail" :
 				
 				// get the email
 				if(!isset($payload['email'])) returnError("No email provided.");
 				$email = mysqli_real_escape_string($db, $payload['email']);
 				if(!filter_var($email, FILTER_VALIDATE_EMAIL)) returnError("Email not valid.");
 
-
-				echo "The email to look up is: " . $email;
 
 
 				// get the user
@@ -175,7 +175,6 @@
 				}
 
 
-				print_r($result);
 
 				// pick a token
 				$str = "0123456789!#%&AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
