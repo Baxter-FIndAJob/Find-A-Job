@@ -34,9 +34,9 @@
  
 	<p class="heading"> Special Thanks<p>
 	<div class="text">
-	<p>A special thanks to Rob Korobkin for advising our group this year. Rob is a local web developer and community organizer. Thank you, Rob, for volunteering and investing in our project. </p>
+	<p>A special thanks to Rob Korobkin for advising our group this year. Rob is a local web developer and community organizer. Thank you, Rob, for teaching us to code and design software. </p>
 	<p>Also a big thank you to Halsted Larsson for overseeing the computer science cluster on Fridays.</p>
-
+	<p>Icons made by Smashicons from www.flaticon.com </p>
 
 <div class="footer">
 		<div class="footerNavItem">
