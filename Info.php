@@ -24,11 +24,11 @@
     
 	<p>The HOME screen is all of the available jobs. It is a list of jobs and locations. All jobs are seeking people from 14-20 years old. You can also filter the job search in the header. </p> 
 
-	<p>WORK PERMIT APPLICATION is a link to a work permit you can fill out.</p>
+	<p>WORK PERMIT APPLICATION is a link to a work permit you can print and fill out.</p>
 
 	<p>ABOUT page is where you are currently. This page outlines the apps use and tells you a little about the developers. It also provides links to important information regarding the project and the idea the sparked it.</p>
 
-	<p>PROFILE is for business to post available jobs along with specifications. The profiles would include age, description of job, picture, name, and social media and contact information. This is not a completed section we are still working to improve both the mobile and desktop versions.</p>
+	<p>PROFILE is for business to post available jobs along with specifications. The profiles will include age, description of job, picture, name, and social media and contact information. This is not a completed section we are still working to improve both the mobile and desktop versions.</p>
 
 	</div>
  
