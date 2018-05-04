@@ -15,7 +15,7 @@
 				<button class="options login" id="login_formOption" onclick="changeTab('login_view');">Login</button>
 			</div>
 			<div id="error_container">
-
+			<br>
 			</div>
 
 

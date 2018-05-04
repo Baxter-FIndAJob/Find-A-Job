@@ -535,7 +535,7 @@ html, body{
     margin-top: 15px;
     margin-right: 10px;
     padding: 3px;
-    background: #eaeaea;
+    background: #b9bbbb;
     border-radius: 50px;
     padding-left: 8px;
     padding-right: 8px;
@@ -549,7 +549,7 @@ html, body{
 } 
 
 .job_holder a.s_arrow{
-    background: #49bcf5;
+    background: #4784d8;
 }
 
 .employer_holder a.s_arrow{
@@ -557,7 +557,7 @@ html, body{
     margin-top: 15px;
     margin-right: 10px;
     padding: 3px;
-    background: #49bcf5;
+    background: #4784d8;
     border-radius: 50px;
     padding-left: 8px;
     padding-right: 8px;
