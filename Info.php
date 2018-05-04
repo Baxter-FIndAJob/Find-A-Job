@@ -11,7 +11,7 @@
 		<h1 class="title">Info</h1>
 	</div>
 
-	<p class="heading">Reasoning</p>
+	<p class="heading">Why we Made This App</p>
 	<div class="text">
 		<p>Lots of teenagers in Maine want jobs. They want to make money that’s theirs to spend, and if their parents won’t pay for everything, teenagers might also want to save up for the future. While teenagers can’t make the same kind of time commitments that adults do, they can still do all sorts of things, including mow lawns, shovel snow, wash dishes and work entry level retail, just to name a few examples.</p> 
 
@@ -22,7 +22,7 @@
 	<div class="text">
 		<p> Along the footer, you will see four buttons HOME, WORK PERMIT APPLICATION, ABOUT, and PROFILE.</p>
     
-	<p>The HOME screen is all of the available jobs. It is a list of jobs and locations. All jobs are seeking people from 14-20 years old. You can also filter the job search in the header. </p> 
+	<p>The HOME screen is all of the available jobs. It is a list of jobs and locations. All jobs are seeking people from 14-20 years old. You can also filter the job search in the header.  Tap the  magnifying glass to filter searches. There is a back button that looks like some text followed by downward facing arrow at the top of the home page. If you tap on it you can see recent searches and select them. </p> 
 
 	<p>WORK PERMIT APPLICATION is a link to a work permit you can print and fill out.</p>
 
@@ -37,6 +37,16 @@
 	<p>A special thanks to Rob Korobkin for advising our group this year. Rob is a local web developer and community organizer. Thank you, Rob, for teaching us to code and design software. </p>
 	<p>Also a big thank you to Halsted Larsson for overseeing the computer science cluster on Fridays.</p>
 	<p>Icons made by Smashicons from www.flaticon.com </p>
+
+	</div>
+
+	<p class="heading"> Developers</p>
+	<div class="text">
+		<p>Mustafa Abu Hamad: 9th Grade</p>
+		<p>Fred Czerwinski: 9th Grade</p>
+		<p>Laura Morris: 9th Grade</p>
+	</div>
+
 
 <div class="footer">
 		<div class="footerNavItem">
