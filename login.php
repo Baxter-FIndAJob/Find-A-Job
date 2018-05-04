@@ -15,7 +15,7 @@
 				<button class="options login" id="login_formOption" onclick="changeTab('login_view');">Login</button>
 			</div>
 			<div id="error_container">
-
+			<br>
 			</div>
 			<form class="signup_container" id="signup_form" onsubmit="return validate('signup');" action="server/signup.php" method="POST">
 				<div class="form_container firstname_holder">

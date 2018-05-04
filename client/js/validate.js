@@ -110,8 +110,7 @@ var resetpwdbtn = document.getElementById("resetpwdbtn");
 			if(!request) return false;
 
 			var successHandler = function(response){
-				alert('I came back!');
-				console.log(response);
+				window.location.assign("index-desktop.php");
 			}
 
 		};

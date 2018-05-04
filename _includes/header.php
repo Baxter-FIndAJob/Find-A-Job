@@ -25,9 +25,12 @@
 				
 					if($user){
 						echo '<div class="text_container right">
-								<form action="server/logout.php" method="POST">
-									<button type="submit" class="text_content logout" name="logout">LOGOUT</button>
-								</form>
+								<div class="options_holder">
+									<image src="">
+										<form action="server/logout.php" method="POST" hidden="true">
+											<button type="submit" class="text_content logout" name="logout">LOGOUT</button>
+										</form>
+								</div>
 							</div>';
 					}else{
 						echo '<div class="text_container right">
@@ -40,7 +43,7 @@
 			<div class="bottom container">
 				<div class="text_container left">
 					<a class="text_content view_filter" onclick="filtertoggle(this);">FILTER SEARCH</a> 
-					<a class="text_content view_jobs" href="index.php">VIEW JOBS</a>
+					<a class="text_content view_jobs" href="index-desktop.php">VIEW JOBS</a>
 					<a class="text_content view_companies">VIEW COMPANIES</a>
 					<a class="text_content sponsorship">BECOME A SPONSOR</a>
 					<a class="text_content work_permit">WORK PERMIT</a>
@@ -50,7 +53,7 @@
 				<div class="text_container right">
 					<a class="text_content blog">BLOG</a>
 					<a class="text_content about">ABOUT</a>
-					<a class="text_content faq" href="supportcenter.php">FAQ</a>
+					<a class="text_content faq">FAQ</a>
 					<a class="text_content language">EN</a><img src="client/images/icons/globe_img.png" class="language_globe">
 				</div>				
 			</div>
